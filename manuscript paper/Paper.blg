@@ -1,0 +1,14 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: paper.aux
+The style file: spmpsci.bst
+Database file #1: paper.bib
+A bad cross reference---entry "DBLP:conf/chi/WongCKRX11"
+refers to entry "DBLP:conf/chi/2011a", which doesn't exist
+A bad cross reference---entry "DBLP:conf/icml/BubeckWV13"
+refers to entry "DBLP:conf/icml/2013", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/icml/2013"
+Warning--I didn't find a database entry for "DBLP:conf/chi/2011a"
+Warning--empty year in Jugel:2016:VAV:2884416.2884424
+Warning--empty year in vartakseedb
+Warning--can't use both author and editor fields in Wong2011
+Warning--missing publisher in Wong2011
+(There were 2 error messages)

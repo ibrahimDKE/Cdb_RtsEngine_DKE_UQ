@@ -1,0 +1,315 @@
+\subsection{Cost Estimator: Visualizations Cost Estimation}
+\label{sec:cost_est}
+%
+\begin{algorithm}[t]
+\label{alg:viewsest}
+\caption{$ViewsEstimate$}
+\KwIn{ Attributes $A(a_1, a_2, ..., a_n)$ , Measures $M(m_1, m_2, ..., m_o)$ , Functions $F(f_1, f_2, ..., f_x)$  }
+\KwOut{$\mathcal{S}$: set of views estimated costs}
+%$\mathcal{C} = \phi$ Set of all dimension attributes priorities \;
+\For{ $i = 1 $ \textbf{to} $n$ }{
+%$totalCost = 0$\;
+\For{ $j = 1$ \textbf{to} $o$ }
+{
+\For{ $p = 1$ \textbf{to} $x$ }
+{
+$C(VDQ) = EstCostDQ(a_i, m_j, f_p)$\;
+$C(VD) = EstCostD(a_i, m_j, f_p)$\;
+$C(d(VDQ,VD))$  Eq.\ref{eq:cost_view_measure}\; 
+$Cost = C(VDQ)+ C(VD)+ C(d(VDQ,VD))$ \;
+$\mathcal{S}$.add($Cost, (a_i, m_j, f_p)$) \;
+}
+}
+}
+\Return{ $\mathcal{S}$}\;
+\end{algorithm}
+%
+%\mas{title is so wrong! First, there is no such thing as cost of a dimension! Second, estimating the cost is trivial and not a contribution.}
+%\mas{As i mentioned to you many times, cost estimation is a very mature area. 
+%See a paper like: Predicting Query Execution Time: Are Optimizer Cost Models Really Unusable? and ALL its citations..
+%So to come up with your new cost estimator, you have to show that none of this well established work is good enough and there is something unique about your queries that requires a new estimator, especially in comparison to the ones using machine learning since they make no specific assumptions about the query execution mode.
+%}
+The previous approaches rank dimension attributes according to their priorities 
+and recommend visualizations while being oblivious to the retrieval and computational costs of those visualizations.
+%while considering same retrieval and computational costs for all generated views 
+ %\mas{what does that mean?} 
+However, visualizations created using different dimension and measures attributes have different retrieval and execution costs 
+% \mas{again there is no such thing as cost of dimension!}
+according to the query size, type of the aggregate functions, number of groups in each attribute and 
+the time used to compute the deviation among all values in the corresponding visualizations.
+% 
+%Moreover, views produce different utilities when measuring the deviation distance. %\mas{why different utilities affect the cost?}.
+%
+
+This urges the need to only generate visualizations with high deviations and avoid the computation costs of the low-deviation ones.
+%
+Besides differences in deviation utilities among different visualizations, each visualization exhibits different execution and retrieval costs.
+%
+%Since each view $V=(a,m,f)$ is considered as an aggregate query, each query exhibit different execution and retrieval times (on top of the deviation utilities). 
+%
+Furthermore, some visualizations may take long computations and retrieval time to only yield small deviation distances. 
+%
+The trade-off between gaining high utilities of the visualizations and their computations and querying costs is challenging because 
+it involves the optimizations of finding high utilities visualizations while considering their costs.
+%we define a notion of the benefits $Profit(v)$ of a view $v$ that evaluates the gains from each view as 
+%the utility of view $U(v)$ compared with the time spent $Cost(v)$ to compute all execution 
+%and computational costs of view $v$.
+%\[
+%Profit(v)= \frac{U(v)}{Cost(v)}
+%\]
+%\mas{That should have been brought way earlier, with a general problem definition based on the realtime requirement.}
+%Similarly, 
+%The profit of a dimension attribute $(a_x)$ is computed as total utilities $U(v)$ 
+%of all aggregated views created by  attribute $(a_x)$ along 
+%all measures attributes and aggregated functions divided by their costs e.g. 
+%\begin{equation}\label{ProftAtt}
+%Profit(a_x)= \frac{\sum_{i=1}^M \sum_{j=1}^F U(a_x,m_i,f_j) }{\sum_{i=1}^M \sum_{j=1}^F Cost(a_x,m_i,f_j)}
+%\end{equation}
+
+%the $Profit(Top-K)$ is considered as the summation of the \{Top-K\} 
+%utilities divided by the time spent for querying and computing in views in the space $SP$
+%\[
+%Profit(Top-K)= \frac{\sum_{i=1}^K U(v_i)}{\text{All views' costs Space $SP$}}
+%\]
+
+%We extend our problem definition to find a set of dimension attributes that produce high deviated
+ %views with in the user space limit while considering the space computation costs as following:
+
+%\mas{again again again mixing the problem with solution and no mention of the time constraint! }
+
+
+%\subsubsection{Problem Definition} \label{PDCost}
+%Consider a star schema database $D$ has a set $A =\{a_1,a_2,...,a_n\}$ of dimension attributes 
+%and a set $M =\{m_1,m_2,...,m_x\}$ of measures attributes 
+%with a view space $SP=A \times M \times F$ where $F$ is a set of aggregate functions, 
+%we denote each View $(V_i)=(a,m,f)$  and the result set of the query $Q$ posed over $D$ as $DQ$. 
+%The analyst specifies top($K$) deviated views within a view space limit $R$ where $K \leq R$. 
+%Find a set $\{A'\}$ of high dimension attributes of $Profit(a_i)$  that 
+%creates space $R=A' \times M \times F$ while maximize 
+%the accuracy among all top($K$) deviated views  generated using $SP$ and $R$ and minimizing the 
+%total computation costs of space $R$. \\
+
+%\mas{long paragraph and it is not clear what is the message? are you making a new contribution in cost estimation?}
+The cost estimation step is essential to determine the cost of running and computing the deviations of a visualization to evaluate its costs against 
+the utility obtained by measuring the deviation among visualizations. 
+%
+To improve the performance of recommendation applications, it is vital to discard visualizations that are expected to consume much retrieval and computation time while returning low deviation distances.
+%
+%which 
+% \mas{and why is it needed?}.
+
+The cost estimation modules approximate CPU and I/O costs to combine them into an overall metric that is used for 
+comparing alternative plans. 
+%
+The problem of choosing an appropriate technique to determine CPU and I/O costs requires considerable care. 
+%
+An early study \cite{Mackert:1986:ROV:16856.16863} identified key roles for accurate cost estimation, such as the physical and statistical properties of data.
+%that in addition to the physical and statistical properties of the input data streams 
+%and the computation of selectivity, modeling buffer utilization plays a key role in 
+%accurate estimation. 
+%
+%This requires using different buffer pool hit ratios depending on the 
+%levels of indexes as well as adjusting buffer utilization by taking into account properties of 
+%join methods. 
+%
+Cost models take into account relevant aspects of physical design, e.g., co-location of data and index pages. 
+%
+However, the ability to do accurate cost estimation and propagation of statistical information on data remains one of the difficult open issues 
+in query optimization \cite{Chaudhuri:1998:OQO:275487.275492}.
+%
+
+We determine the cost of a view $Cost(V_i)$ as the sum of the following: 
+\begin{itemize}
+	\item Cost of running view $V_i(a,m,f)$ on dataset $D$.
+	\item Cost of running view  $V_i(a,m,f)$ on dataset $DQ$.
+	\item Computation cost of the distance function $S(V_i DQ, V_i D)$.
+\end{itemize}
+ %the  which represents 
+%the cost of calculating the deviation measure among all values of both views $d[(V_i DQ),(V_i D)]$ . 
+Formally:
+\begin{equation}
+\label{eq:cost_view}
+Cost(V_i)= C(V_i DQ) + C(V_i D) +  C(S(V_i DQ, V_i D))
+\end{equation}
+%
+%\blue{next sentence is not clear. } The cost of a dimension attribute $(a_x)$ 
+%\mas{what does it mean to say cost of a dimension?} 
+%is computed as total costs 
+%of all aggregated views created by  attribute $(a_x)$ along 
+%all measures attributes and aggregated functions.% e.g. 
+%\mas{what is view()?}
+%\[
+%\text{the estimated attribute cost} (a_x)= \sum_{i=1}^M \sum_{j=1}^F view(a_x,m_i,f_j)
+%\]
+
+As mentioned previously, the cost of running a view $V_i(a,m,f)$ on a database is affected by various factors. 
+%
+For instance, access paths and indices that are used to execute the view determine the proper execution plan, which reflects the view execution cost.
+%
+%t of the view then selection of proper execution plan. 
+%Further, memory and disk accesses issues affect on the cost of query like database buffer size 
+%and block reading time have essential impact on execution cost of view. 
+%
+%In addition, the query 
+%execution differs on row oriented and column oriented databases which makes the estimation process is 
+%challenging. %\mas{so what?} \\
+
+\noindent \textbf{Running Cost of Views $C(V_i DQ)$ and $C(V_i D)$}: 
+%
+refers to the retrieval cost of the results of both views $V_i DQ$ and $V_i D$ as discussed earlier. 
+
+%\blue{this sentence is not clear. } that it is hardly to obtain the exact execution time however, several work illustrated the different
+ %approaches to estimate and approximate the aggregated queries  
+ %\cite{Lazaridis:2001:PAA:376284.375718,du1997estimators}
+ %and other researches consider the optimizing the execution of aggregated queries  
+ %\cite{Hou:1989:PAR:67544.66933,Chaudhuri:1994:IGQ:645920.672834}
+ %using different techniques of transformations 
+ %\cite{Chaudhuri:1994:IGQ:645920.672834,Afrati909designingan} 
+% and developed methods for query rewriting rules of 
+% aggregate queries  \cite{Gupta:1995:APD:645921.673150} using group-by operator evaluations. 
+%
+
+\noindent \textbf{Computation Cost of $C( S(V_i DQ, V_i D))$}: is considered as the time spent on calculating the distance measure $S()$ for each value in both corresponding views.
+%
+
+The number of points that are compared in the corresponding views $V_i DQ$ and $V_i D$ is the maximum number of groups (bins) among these two views, and it is denoted as $n$.
+%
+Alternatively, it equals the maximum number of distinct values in $V_i DQ$ and $V_i D$ attribute dimension.
+
+%The number of points that are compared in the views is actually the number of groups (bins) $n$ in these views. 
+%
+Note that the cost of distance measures vary according to their computational complexity. 
+%
+For example, the Euclidean distance is faster than the Earth Mover $(EMD)$ distance function.
+%
+This is because $EMD$ has a very high complexity $O(n^3 log n )$  \cite{Jang:2011:LAE:2063576.2063652} while the complexity of the Euclidean distance is $O(n)$.
+%
+
+%We denote the size of a view $V_i$ as $Dval(V_i)$, which represent the number of groups in the view.
+%
+%Alternatively, it equals the number of distinct values in this view's attribute dimension.
+%\mas{is N the same as Dval?}
+Since the computation cost depends on $n$ and also 
+depends on the computational complexity of the distance measure, we propose the following view cost equation:
+%\begin{center}
+\begin{equation}
+\label{eq:cost_view_measure}
+C( S(V_i DQ, V_i D)) = O_d( n ) \times d_t
+\end{equation}
+%\end{center}
+Where $O_d$ is the complexity of the distance measure, and $d_t$ is the computation time used to compute a single point.
+% the distance between two corresponding points.
+ %and  $Dval(V_i DQ)\leq Dval(V_i D)$. \mas{and how to know those values O and d? and more importantly, how is that applied to different distance measures? for instance, EMD is of $O(N^3)$, but now it is linear under this eq!!}
+
+\subsubsection{Retrieval Costs of Visualizations}
+\label{sec:ret_cost_view}
+%
+In our context, the execution cost of views can be obtained using two different methods:
+ %
+\begin{itemize}
+\item \textbf{Actual Cost:} actual costs of the views are obtained by executing all queries to get their exact I/O costs, and calculating the deviation among the corresponding views.
+%
+\item \textbf{DB Estimates:} reading the estimates of each view directly from the database engine (i.e., query optimizers).
+%\item[Computational Estimates:] obtaining the retrieval costs of each view using independent cost estimation approaches.
+\end{itemize}
+However, our proposed cost method is not restricted to a certain cost estimation approach including 
+methods based on sampling (e.g., \cite{Hou:1991:SEA:115302.115300,Lipton:1990:PSE:93597.93611}), histograms (e.g., \cite{Ioannidis:2003:HH:1315451.1315455}), and machine learning (e.g., \cite{Getoor:2001:SEU:375663.375727,Stillger:2001:LDL:645927.672349}) which can be used to obtain the retrieval cost from independent estimation models.
+%
+% This approach \mas{which approach?} is an adoption of the cost model presented in \cite{Aouiche06clustering-basedmaterialized} 
+% which based on the  most data warehouse cost 
+%models \cite{Golfarelli:1998:MFD:294260.294261}.model \cite{Aouiche06clustering-basedmaterialized} \mas{and why is that a good one that you felt like adopting?} assumed that the cost of a query $q$ is 
+%proportional to the number of tuples in the view on which $q$ is executed and 
+%estimates the size of a given view as:\\ \mas{a whole bunch of new symbols! how is that related to your model? if different model, then describe in english, if needed in the first place}
+%Let $ms(T)$ be the maximum size of fact table T, $|T|$ be the number of tuples
+%in T, $Di\_{PK}$ be a primary key of dimension Di, $Di\_{PK}$ be the cardinality of
+%the attribute(s) that form the primary key, and N be the number of dimension
+%tables. Then $ms(T) = \Pi _{i=1}^N$$  {|Di\_{PK}|} $.
+%Let $ms(V)$ be the maximum size of a given view $v$ that has attributes
+%$a_1, a_2,...,a_k$ in its group by clause, where k is the number of attributes in
+%$v$ and $|ai|$ is the cardinality of attribute $ai$. Then, $ms(v) =\Pi _{i=1}^k$$ 
+%|ai|$. From the number of tuples in $v$, we estimate its size, in bytes, as 
+%follows:\\
+%$size(v) = |v| \times \sum_{i=1}^c$ $size(c_i)$
+%,where $size(c_i)$ denotes the size in bytes of column
+%$c_i$ of $v$, and $c$ is the number of columns in $v$.
+%Golfarelli et al. \cite{Golfarelli:1998:MFD:294260.294261} proposed to estimate the number of tuples in a given view
+%$v$ by using Yao’s formula \cite{Yao:1977:ABA:359461.359475} however,
+%Yao’s formulaes are based on the assumption that data is
+%uniformly distributed. Any skew in the data tends to reduce the number of tuples
+%in the aggregate view. Hence, the uniform assumption tends to overestimate the
+%size of the views and give a crude estimation. But, they have the advantage
+%to be simple to implement and fast to compute  \cite{Aouiche06clustering-basedmaterialized}. 
+%In addition, because of the
+%modularity of our approach, it is easy to replace the cost model module by
+%another more accurate one.
+ 
+% We proposed a cost estimation model \mas{again and again, are you making a new contribution for cost estimation?!} is a modification of the previous cost model 
+% to estimate the cost of view $v$ in terms of the cost of complexity in computing the 
+% aggregate functions over the intermediate results of view referred as 
+% $CostCplx(v)$ and it avoids the limitations of using Yao’s formulas that assumed that data is
+%uniformly distributed. In our cost model the size of the view $v$ is already known 
+%from getting the number of distinct values in each dimension attribute $Dval(V)$.
+% Thus, we assume the intermediate results of views before calculating the aggregation 
+% resides on the memory and previously accessed from the disk also we rank the 
+% aggregate functions according  to the execution complexity of the aggregate function 
+% since it difficult to get the exact execution time for each aggregate function. 
+%For instance, the execution complexity of $Average$ should be higher than $Sum$ and $Count$. 
+%Thus, we define a notion $Compx(f)$ to refer the estimated complexity 
+%of each aggregate function $f$.  The size of intermediate results $size_{Inter} (v)$ can be 
+%calculated according to the cost model  \cite{Aouiche06clustering-basedmaterialized} 
+%as follows:\\ $size_{Inter} (v)= |Records| \times \sum_{i=1}^c$ $size(c_i)$
+%, where $size(c_i)$ denotes the size in bytes of column
+%$c_i$ of $v$, and $c$ is the number of columns in $v$.
+
+% The cost of complexity $CostCplx(v)$ of view $v=(a,m,f)$ is affected by how much data would be aggregated which represents 
+%the intermediate results size, the 
+% complexity of the aggregate function $f$ which computes the aggregates, and how many times the aggregate function should work which refers to
+%the number of groups are aggregated in the intermediate results size.
+ 
+% \mas{what is the unit of that cost? what is the unit of compx(f)? how do you assign it based on the aggregate function?}
+% \begin{equation}\label{CostCplx}
+%CostCplx(v) =size_{Inter} (v) \times Compx(f) \times |v|
+%\end{equation}
+
+Our proposed estimation algorithm $ViewsEstimate$ is illustrated in Alg.4. % \ref{alg:viewsest}.
+%
+$ViewsEstimate$ takes dimensions, measures attributes, and the aggregated functions as input. 
+%
+Then it estimates I/O and computation time for each view $V_i$ for both datasets and it returns the estimated costs of each view.
+%
+The estimated I/O time for each view is obtained by reading the estimation of queries from the database query optimizer or using an independent 
+cost estimation model. 
+%
+%\blue{ using equation \ref{eq:}. }
+%\mas{huh? so which one is used?}. 
+%
+Then, $ViewsEstimate$ calculates the computations costs of the distance measure between the corresponding views according to equation Eq. \ref{eq:cost_view_measure} to find the total estimated cost.
+%
+Afterwards, $ViewsEstimate$ adds up the computations cost and the I/O cost for $V_i$, then stores it into set $\mathcal{S}$.
+%
+
+Cost Estimator utilizes the set $\mathcal{S}$ by defining a benefit of a dimension attribute $Benefit(a_i)$ as the priority of $a_i$ divided by the maximum estimated cost of any view created using dimension attribute $a_i$, formally:
+%
+\begin{equation}
+\label{eq:att_benefit}
+Benefit(a_i)=\frac{Pr(a_i)}{Cost(a_i)}
+\end{equation}
+%
+where $Cost(a_i)$ is the maximum estimated cost of any view created by grouping by $a_i$.
+
+%\blue{i think it is now called by another name, right?:Realtime Scoring Engine (RtSEngine)? } 
+%
+Finally, $DimsEstimate$ ranks dimension attributes depending upon their benefits as computed by Eq. \ref{eq:att_benefit}.
+%
+As shown in Alg.4, % \ref{alg:viewsest},
+ $ViewsEstimate$ inputs a set of dimensions and a visualization number limit $R$,
+ %\mas{so if the constraint is still on number of views, why incorporate processing time in the first place?!!!}
+then it iteratively calculates the priority and the cost of each dimension attribute to compute the benefit of each attribute. 
+%
+$ViewsEstimate$ computes the number of dimension attributes $G$ that create the limit $R$, and then outputs a set of high $Benefit$ attributes of size $G$.
+%
+%Since the space size is the 
+ %product of number of dimension attributes $A$, number of measure attributes $M$, and number 
+% of aggregate functions $F$,  algorithm \ref{SpaceOptimizer} 
+ %finds the number of dimension attributes $G$ that creates the limit $R$ then 
+ %outputs a set of high $Benefit$ attributes of size $G$.

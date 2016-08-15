@@ -1,0 +1,27 @@
+\section{Conclusion}
+%
+Finding top interesting visualizations by exploring a specified number of visualizations or an execution time budget, while persevering the quality and the accuracy of the recommended views is a challenging and emerging problem. 
+%
+In this paper, we addressed this problem and proposed an efficient framework called Realtime Scoring Engine (RtSEngine) that assist data analysts in the exploration of visualizations generated from structured databases.
+%
+
+Specifically, RtSEngine supports analysts by efficiently recommending visualizations while meeting analysts budgets: certain number of visualizations or execution time quote.
+%
+%to limit the exploration of visualizations for a specified number of visualizations or certain execution time quote to recommend a set of views that meets the analysts budgets. 
+%
+RtSEngine accomplishes this by incorporating inventive approaches to prioritize and score attributes that form all possible visualizations in database based on their statistical proprieties such as selectivity ratio, data distribution, and number of distinct values.
+%
+Then, RtSEngine recommends the views created from top scored attributes.
+%
+
+In addition, we presented visualizations cost-aware techniques that estimate the retrieval and computation costs of all visualizations.
+%
+Those estimated costs are then fed to RtSEngine to recommend views while considering their costs to guarantee the efficiency and effectiveness of the recommendation process. 
+%
+%
+% utilise the estimated costs with to recommend views while considering their costs. 
+%
+
+Finally, we conducted comparative experiments and demonstrated the quality of visualizations and the overhead obtained by applying our techniques on both synthetic and real datasets.
+%
+The experiments showed superior effectiveness and efficiency of our proposed approaches on different time and space limits. 

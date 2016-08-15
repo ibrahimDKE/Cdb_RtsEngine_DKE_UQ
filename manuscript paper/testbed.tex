@@ -1,0 +1,105 @@
+\section{Experiments Setup}
+\label{sec:testbed}
+%
+Before presenting our results, we describe the details of the conducted experiments including the used datasets, the proposed algorithms and the performance metrics which we use to measure the effectiveness and efficiency.
+%
+Table \ref{tab:parameters} shows the parameters used throughout the experiments.
+%
+\begin{table}[t]
+\centering
+\caption{Experiments parameters and their default values}
+{
+%\begin{center}
+\begin{tabular}{|c|c|c|} \hline
+\textbf{Parameter} & \textbf{Range} & \textbf{Default Values}\\ \hline
+	Top-$K$ & 1 - 70 & 10, 20 \\ \hline
+	Views Limit $R$ & 1 - 100 & 70  \\ \hline
+	Dimension Attributes $|A|$ & -- & 9, 10 \\ \hline
+	Measure Attributes  $|M|$ & -- & 3,  10 \\ \hline
+	Aggregate Functions $|F|$ & \texttt{count, sum, avg, min, max } & --  \\ \hline
+%King George Square Station 1A  & 929.3499756 \\ \hline
+\end{tabular}}
+%\end{center}
+\label{tab:parameters}
+\end{table}
+%
+\subsection{Datasets}
+%
+We used the following real world datasets:
+%
+\begin{enumerate}
+%
+\item \textbf{Flights Database:} The Flights database contains flights delays in the year 2008. 
+%
+It was obtained from the U.S. Department of Transportation's Bureau of Transportation Statistics (BTS) \footnote { http://www.transtats.bts.gov/}. 
+%
+The database contains 250k tuples with a total of 20 dimensions: 10 dimension attributes and 10 measures attributes. 
+%
+\item \textbf{GoCard Database:} This is the database we introduced in Example \ref{ex:gocard}.
+%
+It has 4.4 million tuples with a total of 13 dimensions.
+%
+%
+\end{enumerate}
+%
+\subsection{Algorithms}
+%
+We have implemented the following algorithms:
+%
+\begin{enumerate}
+%
+	\item \textbf{SeeDB Baseline:} State-of-the-art algorithm \cite{DBLP:journals/pvldb/VartakMPP14} that processes the entire data without discarding any view. It thus provides an upper bound on latency and accuracy and lower bound on the error distance.
+	%
+\item \textbf{SeeDB Rnd:} A modifed version of SeeDB which returns a random set of $K$ aggregate views as the result. 
+%
+This strategy gives a lower bound on accuracy and upper bound on error distance: for any technique to be useful, it must do significantly better than SeeDB Rnd.
+%
+%
+\item \textbf{DiffDVal: } which prioritizes dimensions based on the number of distinct values in each dimension (Algorithm \ref{alg:diff_dval}).
+%
+\item \textbf{Sela: } Our proposed algorithm (Algorithm \ref{alg:sela}).
+%
+\item \textbf{DimsHisto: } Our proposed algorithm (Algorithm \ref{alg:prio_hist}).
+%
+%
+\end{enumerate}
+%
+Note that the Priority Evaluator module in our proposed RtSEngine utilizes DiffDVal, Sela and DimsHisto algorithms to prioritize visualizations. 
+%
+On the other hand, the Cost Estimator module implements the same three algorithms while utilizing the cost estimations approaches described earlier in Section \ref{sec:cost_est}.
+%
+\subsection{Performance Metrics}
+%
+We used two metrics for evaluating the results of our proposed approaches.
+%
+One of these metrics is used by SeeDB \cite{DBLP:journals/pvldb/VartakMPP14} to evaluate the quality of the recommended views. 
+%
+To evaluate the quality and correctness of the proposed algorithms, we used the following metrics:
+%
+\begin{enumerate}
+%
+\item \textbf{Accuracy:} if $\{VS\}$ is the set of aggregate views with the highest utility, and $\{VT\}$ is the 
+set of aggregate views returned by the baseline SeeDB, then the accuracy is defined as:
+\[
+\text{Accuracy} = \frac{1}{|VT|} * \sum{x}  \text{   ,where  }  \begin{cases}   x = 1 & \text{ if } VT_i = VS_i \\ x = 0 & otherwise \end{cases}
+\]
+i.e., accuracy is the fraction of true positions in the aggregate views returned by SeeDB.
+%\mas{as I mentioned MANY times now, there is no positions in that equation!!}
+%
+\item \textbf{Distance Error:} since multiple aggregate views can have similar utility values, we use the utility distance as a measure of how far SeeDB results are from the true Top-$K$ aggregate views. 
+%
+Formally, SeeDB \cite{vartakseedb} defines distance error as the difference between the average utility of $\{VT\}$ and the average utility of $\{VS\}$:
+\[
+\text{Distance Error} = \frac{1}{K} (\sum_{i}{ U(VT_i)} - \sum_{i}{U(VS_i)})
+\]
+%
+\end{enumerate}
+%Through the next set of experiments, we evaluate the impact of our proposed optimizations techniques.
+%
+
+All experiments were run on a PC machine with Windows 10, Intel CPU 2.8 Ghz and 8 GB of RAM memory.
+%
+The RtSEngine and the algorithms were coded using the Java programming language, and datasets were loaded into a Postgres DBMS.
+%
+The datasets along with the implementation are available online as a GitHub repository at: http://.
+%

@@ -1,0 +1,46 @@
+\begin{abstract}
+%
+The improvement of data storage and data acquisition techniques has led to huge accumulated data volumes  in a variety of 
+applications.
+%
+International research enterprises such as the Human Genome and the Digital Sky Survey Projects are generating massive volumes of scientific data.
+%
+A major challenge with these datasets is to glean insights from them to discover patterns or to originate relationships. 
+%
+The analysis of these massive, typically messy and inconsistent volumes of data is indeed crucial and challenging in many application domains. 
+%
+%The analysis and exploration necessary to disclose this hidden information places 
+%significant demands on the human-computer interfaces to these datasets. 
+%
+
+Hence, the research community has introduced a number of visualizations tools to guide and help analysts in exploring the data space to extract potentially useful information. 
+%
+However, when working with high-dimensional datasets, identifying visualizations that show interesting variations and trends in data is not trivial: the analyst must manually specify a large number of visualizations, explore relationships among various attributes, and examine different subsets 
+of data before discovering visualizations that are interesting or insightful.
+%
+\eat{
+Current visualization tools provide various techniques to measure the \emph{interestingness} of data such as computing deviations among data distributions, mining outlier aspects, and computing data variance. 
+%
+Those tools identify the interesting visualizations by exploring all possible visualizations in datasets.
+%
+}
+
+Though, exploring all possible visualizations involves complex challenges.
+%
+It is a costly and time consuming process especially when the dimensionality is high.  
+%
+Furthermore, the rapid growth of databases becomes multifaceted in their channels and dimensionality thus, the transition from static analysis to real-time analytics represents a fundamental paradigm shift in the field of Big Data. 
+%
+	
+Motivated by the above challenges, we propose an efficient framework called \emph{Realtime Scoring Engine} (\textbf{RtSEngine}) that assists analysts to limit the exploration of visualizations for a specified
+number of visualizations and/or certain execution time quote to recommend a set of visualizations that meet analysts' budgets. 
+%
+To achieve that, \textbf{RtSEngine} incorporates our proposed approaches to prioritize and score attributes that form all possible visualizations in a dataset based on their statistical properties such as selectivity, data distribution, and number of distinct values.
+%
+Then, \textbf{RtSEngine} recommends the visualizations created from the top scored attributes. 
+%
+Moreover, we present visualizations cost-aware techniques that estimate the retrieval and computation costs of each visualization so that analysts may discard high-cost visualizations.
+%
+We show and evaluate the effectiveness and efficiency of our proposed approaches, and asses the quality of visualizations and the overhead obtained by applying our techniques on both synthetic and real datasets.
+%
+\end{abstract}

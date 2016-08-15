@@ -1,0 +1,20 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: template.aux
+The style file: spmpsci.bst
+Database file #1: paper.bib
+Repeated entry---line 484 of file paper.bib
+ : @inproceedings{kandel2012profiler
+ :                                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 520 of file paper.bib
+ : @inproceedings{DBLP:conf/sigmod/GonzalezHJLMSSG10
+ :                                                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1070 of file paper.bib
+ : @inproceedings{DBLP:conf/sigmod/HellersteinHW97
+ :                                                ,
+I'm skipping whatever remains of this entry
+A bad cross reference---entry "DBLP:conf/icml/BubeckWV13"
+refers to entry "DBLP:conf/icml/2013", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/icml/2013"
+Warning--empty year in vartakseedb
+(There were 4 error messages)

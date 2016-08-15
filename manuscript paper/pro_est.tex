@@ -1,0 +1,481 @@
+%\subsection{Priority Evaluator: Dimension Attributes Prioritizing}
+%\label{sec:priority_evaluator}
+\subsection{Priority Evaluator: Dimension Attributes Prioritizing}
+\label{sec:priority_evaluator}
+%
+%\mas{lots of language problems}
+In this section, we discuss the proposed approaches for
+prioritizing the dimension attributes in the both results set $DQ$ and reference 
+set (e.g. the entire dataset $D$) and suggest a set of visualizations that are likely 
+to be interesting and score high deviation utilities in certain realtime limits 
+such as maximum number of explored visualizations and execution time.
+The proposed approaches are based on our observations about 
+the difference between the number of distinct values in the dimension attribute in 
+the results set $DQ$ and the entire dataset $D$ affects on the deviation measures. 
+In addition, other statistical features may also affect such as data distribution 
+and selectivity; such features will be discussed in more detail in the next subsections.
+ The following example illustrates this observation and 
+describes how our strategies are agnostic for any recommendation system. 
+%
+
+%\mas{again, very bad english!}
+\begin{example}
+\label{ex:priority}
+%\end{Exa}
+%Consider an airport analytics team that
+%is tasked with studying the metrics for all flights departure
+%from Origin1, these flights that have poor performance \mas{what does that mean?}. 
+Suppose a flights database  keeps flights records which contains two
+dimension attributes such as destination airport name and airlines and one
+metric is arrival delays. Given the large size of the database
+(millions of records) contains 100 airports and 20 airlines
+companies, the analyst will study the average delays
+visualizations grouped by airports and airlines using a recommendation tool e.g. SeeDB and comparing
+these views with a reference set to glean insights about all flights
+departure from $Origin1$.
+%
+These views can be expressed as SQL queries:
+\footnotesize
+\begin{itemize}
+\item $V_1$: select AVG (arrival delays), airport from flights where origin='Origin1'  group by airport;
+\item $V_2$: select AVG (arrival delays), airlines from flights where origin='Origin1' group by airlines;
+\end{itemize}
+%\normalsize
+%
+\qed
+\end{example}
+%
+For instance, both visualizations $V_1$ and $V_2$ in Example \ref{ex:priority} have the same number of distinct values: 10 
+destinations airports and 10 airlines operators.
+%
+Eventually, aggregate views $V_1$ and $V_2$ will be compared to the corresponding reference views (i.e., the entire dataset $D$) according to a metric.
+%
+In \cite{DBLP:journals/pvldb/VartakMPP14} for instance, it uses a deviation-based metric that 
+calculates the distance between the normalized distributions between the target and reference views. 
+%
+In our Example \ref{ex:priority}, the average arrival delays of 10 destinations airports in view $V_1$ are evaluated against the average arrival delays of 100 destinations airports 
+in the entire dataset $D$.
+%
+Similarly, the average arrival delays of the 10 airlines operators in view $V_2$ are compared against the average arrival delays of the all 20 airlines operators in the entire dataset $D$.
+ %to obtain the distance of $V_1$ \mas{distance from what?}. 
+ %To compute the utility distance \mas{utility, distance, or deviation?} there is 
+Thus, only 10 distinct values in view $V_1$ will be compared with equivalent values in the reference view, while the remaining 90 distinct values would have no equivalent values in the target view.
+%
+As a result, those remaining 90 distinct values will be compared with zeros.
+%and the remaining 90 distinct values will be compared with 0s, 
+% 
+
+Furthermore, in view $V_2$ there are only 10 airlines operators that would be compared with zeros.
+% 
+This illustration arises a question about the impact of the difference in distinct values of views and their data deviations according to distance-based metrics.
+%
+% however, when the query returns a smaller number of airports; this means that the 
+ %computed distance will be higher \mas{hight than what? why?} than the 
+ %distance of $V_1$ \mas{I have no idea what does that sentence mean?}. 
+ %Correspondingly, the number of distinct values in the airlines dimension affects on the 
+ %utility distance of $V_2$ \mas{??!!}.
+%
+%\mas{to formalize what? as one of the reviewers mentioned, that example did not lead anywhere}
+%\mas{why do you need the term $Dval(v_i(DQ))$ then call it $N$? }
+Formally, $Dval(V_i(DQ))$ is defined as the number of distinct values in a target view $V_i$.
+%
+Consequently, $Dval(V_i(D))$ is the number of distinct values in the corresponding reference view $V_i$.
+%
+In Example \ref{ex:priority}, $Dval(V_1 (DQ)) = 10$ and $Dval(V_1 (D)) = 100$.
+%
+As mentioned previously, the deviation of each visualization is captured by a distance based metric that computes the distance between two probability distributions of views.
+%
+That is, the deviation of a visualization $V_i$ is its utility defined in Eq. \ref{eq:utility}: $U(V_i) = S( P(V_i(DQ)), P(V_i(D)) )$.
+%
+%i.e., $U(V_i) = S( P[V_{i}Q (x_i)], P[V_{i}D (y_i)])$ 
+%where $V_{i}Q (x_i)$ and $V_{i}D (y_i)$ 
+%
+The distance metric $S()$ is a distance function such as Euclidean, Earth-Mover distance, ... , etc.
+
+
+We discuss the influence of the difference in distinct values on computing the view utility 
+$U(V_i)$ using Euclidean distance (although our experiments are using Earth Movers distance function as the default deviation measure).
+  %the number of distinct values of the view $V_i(DQ)$ and $V_i(D)$ \mas{number of distinct values is defined for a column not a view!},
+%where $0 < N \leq N'$, the utility of $V_i$ is the distance between 
+%the two probability distributions \mas{big notation mess starts here! why defining something, then use =, then use another notation?! Besides couldn't find that $V_{i}Q$ in the table of symbols} $V_i(DQ) = V_{i}Q$ and $V_i(D) = V_{i}D$,
+%i.e., 
+%$U(V_i) = S( P[V_{i}Q (x_i)], P[V_{i}D (y_i)])$ 
+%where $V_{i}Q (x_i)$ and $V_{i}D (y_i)$ are the values by any aggregate function $F$ of
+%measure $M$ over group by attribute $A$.
+%
+%The distance $S$ is distance measure between the two views;
+%this distance measure could be Euclidean, Earth-Mover
+%distance, or others. 
+%
+%However, in this example \mas{which example?} we discuss the
+%influence of number of distinct values on the view utility
+%using Euclidean distance and also consider the Earth-Mover
+%distance \mas{is EMD actually discussed?}.
+ As shown in Eq. \ref{eq:ec_d}, $L_2$-norm distance evaluates all aggregated values (points) in both views $V_i(DQ)$ and $V_i(D)$ to find the utility $U(V_i)$. 
+%
+Hence, $V_1$'s utility in Example \ref{ex:priority} is obtained by computing the $L_2$-norm distance between the average arrival delays (values) of destination airports (points) in $V_1(DQ)$ and all airports in $V_1(D)$ the entire dataset.
+% \mas{is it V or D? }
+%
+Formally:
+%
+\begin{equation}
+\label{eq:ec_d}
+U(V_i) = \sqrt{ \sum^{n}_{j=1}{(V_{i}D(y_j) - V_{i}DQ(x_j))^2}}
+\end{equation}
+%
+where $n > 0$ is the maximum number of points among $V_{i}D$ and $V_{i}DQ$.
+%
+Since the compared views (i.e. target and reference view) may contain different number of distinct values, we denote $n'$ as the number of records in $V_i(DQ)$ 
+and $n''$ as the number of records in $V_i(D)$.
+%
+Hence, we can rewrite the utility equation of view $V_i$ as follows:
+%
+\begin{equation}
+\label{eq:ec_d2}
+U(V_i) = \sqrt{ \sum^{n'}_{j=1}{(V_{i}D(y_j) - V_{i}DQ(x_j))^2} + \sum_{j=n'+1}^{n''}{(V_{i}D(y_j) - 0)^2} }
+\end{equation}
+%
+where $n' < n''$, and $n = n' + n''$.
+%
+Because there are only $n'$ values in the target view $V_{i}DQ$, then all subsequent points in the reference 
+view $V_{i}D$, i.e., $n'' - n'$ values, would be compared with zeros.
+%
+The higher the difference between distinct values in corresponding views forces much remaining values 
+to be compared with zeros and increases the distance among views.
+%
+In Example \ref{ex:priority}, the number of records $n'$ of both target views 
+$V_1(DQ)$ and $V_2(DQ)$ equals 10. 
+%
+However, the number of records in the reference views, i.e., $n''$ are $V_1(D) = 100$ and $V_2(D) = 20$.  
+%
+$V_1$ is expected to show higher distance (deviation) than $V_2$ when computing 
+$L_2$ norm distance because 90 airports would be evaluated to zeros in $V_1$ but there are only 10 airlines operators with zero values in view 
+$V_2$. 
+%
+Since, every view is an aggregate group by query over a dimension attribute as described earlier, then, the number of records in 
+each view equals the number of distinct values in the grouped dimension attribute.
+%
+
+Such observations can be utilized to early asses these (visualizations) views before executing the underlying queries to avoid computational costs (i.e., retrieval and deviation measure costs) by evaluating dimension attributes that contribute in creating visualizations.
+%
+Furthermore, evaluating dimension attributes can also be done using other statistical properties such as selectivity and data distribution.
+%
+
+Further discussion of utilizing these features in our proposed approaches is presented in the next sections.
+% about the difference between 
+%the number of distinct values in the dimension attribute in the results set and the entire dataset \mas{yes there is a "difference", but what is the observation?!!!}. 
+%%
+%This means, how much change of the distinct values in each dimension 
+%attribute before and after the user query. Similarly, the bigger a view size 
+%(i.e has many distinct values) that produced from attribute $A$, has a lower utility \mas{why?} distance 
+%than the smaller view created over the same dimension attribute and the same measure 
+%compared with the entire dataset because the number of distinct points that compared 
+%with zero is less than those in the smaller view \mas{and why would that lead to lower utility?!!}.
+%
+
+\subsubsection{Ranking Dimension Attributes based on Distinct Values} 
+%
+\begin{algorithm}[t]                      
+\caption{$Diff_DVal$}          
+\label{alg:diff_dval}                                         
+\KwIn{ Attributes $A(a_1, a_2, ..., a_n)$ , Query $Q$, Views limit $R$ }
+\KwOut{Set $\mathcal{H}$: Highest priorities of dimension attributes}
+$\mathcal{C} = \phi$ Set of all dimension attributes priorities \;
+\For{ $i = 1 $ \textbf{to} $n$ }{
+	    $Dval D(a_i) \gets$ number of distinct values of $a_i$ in $D$   \;
+	    $Dval DQ(a_i) \gets$ number of distinct values of $a_i$ in $DQ$ \;
+	    $Pr(a_i) = |Dval D(a_i) - Dval DQ(a_i) |$\;
+	    $\mathcal{C} \gets Pr(a_i)$\;
+	}
+	Sort $\mathcal{C}$\;
+	$G= |\frac{R}{M \times F}|$ \text{Calculate the required dimension number}\;
+	%\COMMENT Find high utilities dimension attributes $S\{\}$
+	\For{$i = 1 $ \textbf{to} $G$}{
+		$\mathcal{H} \gets \mathcal{C}.get(i)$\;
+		}
+		\Return{ $\mathcal{H}$}\;
+\end{algorithm}
+%
+%\subsubsection{Ranking dimension attributes based on distinct values}
+%
+%\mas{an algorithm name cannot be symbols! use a proper name!}
+%\mas{How is it related to Jaccard index?}
+%
+Scoring dimensions based on difference of distinct values is the first class of prioritizing algorithms.
+%
+This approach is referred to as $Diff_DVal$, and it is based on the basic observation 
+about the number of distinct values of the dimension attributes in 
+the results set $DQ$ and the entire database $D$. 
+%
+The $Diff_DVal$ algorithm scores the dimension attributes according
+to the difference between the normalized distinct values of attributes in the 
+result set $DQ$ and the entire database $D$. 
+%
+Algorithm \ref{alg:diff_dval} inputs a query $Q$, a set
+of dimension attributes $A$, maximum views limit $R$, and/or execution time limit $tl$. 
+%
+Then $Diff_DVal$ obtains the number
+of distinct values for all dimension attributes in both results sets $DQ$ and reference dataset $D$ by posing underlying queries to select the count of distinct values. 
+%
+After getting the number of distinct values, $Diff_DVal$ computes the priority of each dimension attribute 
+%\mas{make it clear that you are converting the problem from views to dimension attributes} 
+as the difference between each normalized values. 
+%
+Then, $Diff_DVal$ sorts all dimension attributes based on their priorities.
+%
+Based on Eq. \ref{eq:viewspace}, $Diff_DVal$ computes the required number of dimension attributes $G$ that creates the limit number of views $R$, then it returns the set $\mathcal{H}$  of size $G$ that contains a group of high priorities attributes.
+% Since the visualization space size is defined previously as the total number of all possible visualizations which equals the product of number of dimension attributes $A$, number of measure attributes $M$, and number of aggregate functions $F$,  algorithm $Diff_DVal$  computes the required number of dimension attributes $G$ that creates the limit number of views $R$ then outputs a set of high priorities $Pr$ attributes of size $G$.
+
+In case there is an execution time limit $tl$, $Diff_DVal$ returns an ordered set of all dimension attributes based on their priorities, and then it passes the time limit $tl$ to the recommendation visualization engine to limit the executions.
+%\mas{but it does not consider the execution time, in the presence of time limit?}
+ 
+
+
+%\subsubsection{Scoring dimension attributes based on Selectivity}
+\subsubsection{Scoring Dimension Attributes based on Selectivity}
+\label{sec:sela}
+%
+\begin{algorithm}[t]                      
+\caption{$Sela$}          
+\label{alg:sela}                           
+%\begin{algorithmic} [1]                  
+\KwIn{ Attributes $A(a_1, a_2, ..., a_n)$ , Query $Q$, Views limit $R$ }
+\KwOut{Set $\mathcal{H}$: Highest priorities of dimension attributes}
+$\mathcal{C} = \phi$ Set of all dimension attributes priorities \;
+\For{ $i = 1 $ \textbf{to} $n$ }{
+	    $Dval D(a_i) \gets$ number of distinct values of $a_i$ in $D$   \;
+	    $Dval DQ(a_i) \gets$ number of distinct values of $a_i$ in $DQ$ \;
+	     $Pr(a_i) = Dval DQ(a_i) * Sel^{DQ}_{a_i} + (\frac{Dval DQ(a_i)}{Dval D(a_i)}) * Sel^{D}_{a_i}$\;	     
+			$\mathcal{C} \gets Pr(a_i)$\;
+	}
+	 Sort $\mathcal{C}$\;
+	$G= |\frac{R}{M \times F}|$ \text{Calculate the required dimension number}\;
+	%\COMMENT Find high utilities dimension attributes $S\{\}$
+	\For{$i = 1 $ \textbf{to} $G$}{
+		$\mathcal{H} \gets \mathcal{C}.get(i)$\;
+		}
+		\Return{ $\mathcal{H}$}\;
+\end{algorithm}
+%
+In this section, we discuss another variation of scoring the dimension attributes by capturing the data distribution in 
+terms of query size and selectivity.
+%
+Selectivity estimation is at the heart of several important database tasks. 
+%
+It is essential in the accurate estimation of query costs, and allows a query optimizer to characterize good query execution plans from unnecessary ones. 
+%
+It is also important in data reduction techniques such as in computing approximated answers to queries \cite{DBLP:journals/debu/BarbaraDFHHIJJNPRS97,DBLP:conf/pods/GilbertKMS01}. 
+%
+Databases have relied on selectivity estimation methods to generate fast estimates for result sizes \cite{DBLP:conf/sigmod/ChaudhuriMN98,DBLP:conf/pods/CharikarCMN00,DBLP:journals/csur/ManninoCS88,DBLP:conf/sigmod/Piatetsky-ShapiroC84}.
+%
+%This is typically used in cost-based query optimizations, online aggregations, assessing the uniqueness of data,and statistical studies.
+%
+
+The selectivity ratio \cite{lahdenmaki2005relational} is defined as follows:
+\begin{definition}
+The degree to which one value can be differentiated within a wider group of similar values.
+\end{definition}
+%
+The selectivity ratio also known as the number of distinct unique 
+values in a column divided by its cardinality \cite{DBLP:conf/sigmod/KeyHPA12}.
+%
+Formally, the selectivity ratio of attribute $a_i$ is:
+%
+\begin{equation}
+\label{eq:selec_ratio}
+Sel_{a_i}^{B} = \frac{ \text{Number of distinct values of $a_i$ in $B$} }{ \text{Cardinality of $a_i$ in $B$} }
+\end{equation}
+%
+where $B$ is either the result set $DQ$ or the reference dataset $D$, and $0 < Sel^{B}_{a_i}  \leq 1$.
+
+%
+For the flight database in Example \ref{ex:priority}, both the result set $DQ$ and the reference set $D$ have a fixed number of records, which reveals that the selectivity ratio of the airlines column is usually low because we cannot do much filtering with just the 20 values. 
+%
+In contrast, the selectivity ratio of the airports column is high since it has a lot of unique values.
+%
+Our proposed approach $Sela$ utilizes the number of distinct values in the dimensions attributes and incorporates the query size to identify priorities of these dimensions by calculating a %\mas{is it scoring or utility or priority?! isn't it already defined much earlier?}
+priority function $Pr()$ for each dimension attribute. 
+%
+Then $Sela$ reorders the dimension attributes based on the priority. %to prune \mas{prune?} low utility dimension attributes from the data space \mas{what is the data space?}. 
+
+%
+%To discuss the approaches, we collect metadata information for each dimension 
+%attribute $a_i$ in $D$, such as, the selectivity ratio $SelD(a_i)$ of attribute $a_i$ is a measure 
+%of how much variation of data in attribute $a_i$ as:
+%\[
+%SelD(a_i) = \frac{number\_of\_distinct\_values}{number\_of\_records\_of\_D}
+%\]
+%\mas{that Dval thing was defined in terms of views before, is it now defined on attribute?}
+%Where the selectivity ratio is a value between [0-1], $0 < SelD (a_i)  \leq 1$, and the number of distinct values ($Dval D(a_i)$) of the attribute $a_i$, which considered as a measure for the number of data points that would be competed in attribute $a_i$ as:
+%\[
+%Dval D(a_i) = number\_of\_distinct\_values\_in\_attribute\ a_i\_D
+%\]
+
+Using selectivity ratio and the number of distinct values for assessing 
+visualizations in $D$ and $DQ$ gives closer insights 
+%\mas{how?} 
+about the data characteristics such as the size (number of records) of aggregated views generated from 
+group by attributes and the uniqueness degree of data in each dimension attribute.
+%\mas{which characteristics?} 
+%as the change in the size of the views \mas{size of the view - isnt the same as the number of distinct values?} generated by the
+ %dimension attributes over a group by aggregate query using any measure attribute and the 
+% degree of variation of data in the dimension attributes \mas{what does "the degree of variation of data mean?"}. 
+%
+%Computing how much the variations in the size of the 
+%dimension attributes in datasets $D$ and $DQ$. 
+%
+%
+Again, in the flights database Example \ref{ex:priority}, $DQ$ have 10 distinct airports out of 100 airports in the airports column.
+%
+This means any visualization constructed by grouping airports column in 
+result set $DQ$ contains only 10 aggregated records. 
+%
+Hence, using the query size assists on quantifying how many records would be aggregated in each view 
+that formed from grouping a dimension attribute. 
+%
+However, capturing the change of both number in distinct values and the number of aggregated records in each dimension attribute in result set $DQ$ and reference set $D$ is essential to identify visualizations that produce high deviations among all possible visualizations.
+%
+Thus, we modified the priority function $Pr()$ in $Sela$ to consider the number of records in each dimension attribute $a_i$ and its selectivity ratio. Formally:
+%
+\begin{equation}
+\label{eq:prio_sela}
+Pr(a_i) = Dval DQ(a_i) * Sel^{DQ}_{a_i} + (\frac{Dval DQ(a_i)}{Dval D(a_i)}) * Sel^{D}_{a_i}
+\end{equation}
+%
+The attribute priority $Pr(a_i)$ evaluates the number of distinct values for each dimension attribute in result set $DQ$ multiplied by its selectivity ratio.
+%
+This identifies the distinct values variations and the diversity through each dimension attribute when compared with the number of records. 
+%
+Furthermore, the same number of distinct values is assessed in the corresponding dimension attribute of the reference set $D$ while considering the number of records.
+  
+In $Sela$, high priority dimension attributes are assumed to produce aggregate views (i.e., target views) that contain many groups (i.e., points) which are aggregated from records in the result set $DQ$. 
+%
+Also, the same high priority dimension attributes are assumed to produce aggregate views (reference views) 
+by aggregating larger number of records in reference set $D$. 
+%
+This has direct effect on the aggregated values and the number of groups in both target and reference views which is expected to score high deviation utilities. 
+%
+%In contrast, low priority dimension attribute generates aggregate views which compromise smaller number of groups (points) in both datasets. 
+
+Although the $DiffDval$ approach prioritizes dimension attributes (aggregate views) according to the number of distinct values, it is limited since it is incompetent to prioritize dimension attributes (aggregate views) when the number of distinct values remains stable in both result set $DQ$ and reference set $D$.
+%
+Moreover, $DiffDval$ does not consider the data distribution within the attributes. 
+%
+To overcome this limitation, $Sela$ utilizes the number of records and the selectivity ratios of dimension attributes in both datasets $DQ$ and $D$.
+
+%\mas{isnt that basically the number of distinct values squared divided by the number of records?! what is the physical meaning of that component? and what does it mean if it is low or high?} 
+%and the how much change in the number of distinct values happened in the entire 
+%dataset $D$ multiplied by the selectivity ratio of the dimension attribute 
+%in result set $D$ \mas{again what is the physical meaning of that component? wouldnt SelD and DvalD cancel each other?}. 
+%This combines the disparity \mas{what is disparity?} in the number of distinct values of the 
+%dimension attribute and the deviation of the selectivity ratio in these datasets. 
+%
+%\mas{besides the meanings of those components, why would that reflect the actual utility? what was the limitation of the first ranking policy, and why does this policy improve upon it?!}
+
+%
+The proposed algorithm $Sela$ firstly computes the priority of each dimension attribute based on Eq. \ref{eq:prio_sela}.
+%
+Then, it sorts the dimension attributes based on the assigned priority to create a set $\mathcal{H}$ of 
+the top $G$ dimension attributes.
+%
+In case of execution time limit $tl$, $Sela$ returns an ordered set of attributes with the highest priorities and passes time limit $tl$ to the recommendation visualization engine to limit the executions. 
+%
+
+%\subsubsection{Priortrizing Dimension attributes based on histograms}
+\subsubsection{Prioritizing Dimension Attributes based on Histograms}
+\label{sec:priority_hist}
+%
+\begin{algorithm}[t]
+\label{alg:prio_hist}
+\caption{$DimsHisto$}
+\KwIn{ Attributes $A(a_1, a_2, ..., a_n)$ , Query $Q$, Views limit $R$ }
+\KwOut{Set $\mathcal{H}$: Highest priorities of dimension attributes}
+$\mathcal{C} = \phi$ Set of all dimension attributes priorities \;
+\For{ $i = 1 $ \textbf{to} $n$ }{
+Compute $HD(a_i)$ and $HDQ(a_i)$\;
+$Pr(a_i) = d(HD(a_i), HDQ(a_i))$\;
+$\mathcal{C} \gets Pr(a_i)$\;
+}
+Sort $\mathcal{C}$\;
+	$G= |\frac{R}{M \times F}|$ \text{Calculate the required dimension number}\;
+	%\COMMENT Find high utilities dimension attributes $S\{\}$
+	\For{$i = 1 $ \textbf{to} $G$}{
+		$\mathcal{H} \gets \mathcal{C}.get(i)$\;
+		}
+		\Return{ $\mathcal{H}$}\;
+\end{algorithm}
+%\mas{since it is basically COUNT, how does it work for ranking other aggregates?}
+%\mas{should it be used directly? or try to use the histogram to provide an approximate answer for other aggregates and treat it as the actual answer when measuring distance. There is lots of work on generating such approximate answers starting from: Approximate query answering using histograms, IEEE Data Engineering Bulletins, 1999.}
+We proposed $Sela$ and $Diff_DVal$ approaches to automatically recommend views with the highest deviations based on a priority for each dimension attributes in a star schema database $D$.
+%
+Specifically, the proposed approaches relay on the number of the distinct values and the selectivity ratio of each dimension attribute in the compared datasets (i.e., $DQ$ and $D$) to compute the attributes priorities.
+%
+
+However, the limitation
+ % \mas{what other limitations?}
+of the proposed approaches is using the selectivity ratio 
+	%\mas{is it selectivity or number of distinct values or both?} 
+to reflect the degree of variations of data in the dimension attributes while ignoring the distribution of data itself. 
+%
+In addition, it is difficult to prioritize dimensions that have the same distinct values or the same selectivity ratio.
+%
+
+%
+Hence, we propose the $DimsHisto$ approach which attempts to capture data distribution inside the dimensions attributes by creating frequency histograms and directly measuring the distance among corresponding histograms to evaluate these dimensions attributes.
+%
+  %then computing
+  %how much each dimension attribute in the query result set $DQ$ is deviated from
+   %its original version in the entire dataset $D$ by managing \mas{managing?!} the frequency histograms for these 
+   %dimensions \mas{and why would a histogram do better?}. 
+$DimsHisto$ firstly generates frequency histograms for all dimensions attributes in each dataset. 
+%
+Then it computes the deviation in each dimension by calculating the normalized distances between each corresponding dimension attribute.
+%
+For any star schema database $D$, a dimension attribute $a_i \in A =\{a_1, a_2, ... , a_n\}$ can be represented as two frequency histograms: $H_{D(a_i)}$, and $H_{DQ(a_i)}$.
+%
+Those two histograms are created by executing the following queries:
+\\$H_{D(a_i)}$: Select $count(a_i)$ from D group by $a_i$;\\
+$H_{DQ(a_i)}$: Select $count(a_i)$ from DQ group by $a_i$;\\
+%
+Then, after normalizing these histograms, the priority of each dimension attribute is computed as the distance between these two histograms:
+\begin{equation}
+\label{eq:pro_hist}
+Pr(a_i)= S( H_{D(a_i)}, H_{DQ(a_i)} )
+\end{equation}
+%
+Where $S()$ is a distance metric. 
+%
+Eventually, the dimension attributes are sorted according to their priorities.
+%\mas{isnt the same as measuring the deviation when the aggregate function is count?!}.
+
+%
+A constructed histogram $H_{D(a_i)}$ is equivalent to all aggregate views created by aggregating any measure attribute (using aggregate function \emph{Count}) and grouped by the dimension attribute $a_i$ in the dataset $D$.
+%
+Such a histogram assists in improving the performance of recommendation engines by avoiding the construction and computation of aggregate views along all measure attributes.
+
+%Such that, assists to avoid aggregate views construction and computations for all possible measure attributes which improves the performance of recommendation engines.    
+%
+%Algo
+$DimsHisto$ has to submit $2 \times |A|$ queries to compute the histograms of all dimensions 
+and the computations of the distance metric.
+%
+However, this step can be optimized to only $|A|$ by computing the histograms of all dimensions for the entire database offline.
+%
+%The proposed algorithm $$ costs $2n$ queries 
+%(where $n$ is number of the dimension attributes $A$ 
+%\mas{what happened to A?}
+%) to compute the histograms of all dimensions 
+%and the computations of the distance metric, but the actual number of queries can 
+%be declined to $n$ and this optimization can be achieved by computing the histograms of 
+%all dimensions for the entire database offline. 
+While $DimsHisto$ can use any distance metric to compute the deviation among the views, we suggest to use the same metric to unify the metric of the deviations.
+% 
+
+All proposed algorithms $Diff_DVal$, $Sela$ and $DimsHisto$ have the same 
+number of queries as the cost of retrieving data.
+%
+While $DimsHisto$ has additional cost for distance computations, it shows high accuracy for most of the aggregate functions such as Sum, Avg, and Count, because these functions are relative to the data frequencies. 
+%
+Though, $DimsHisto$ is less descriptive to other aggregate functions such as Min and Max, as they are not amenable for sampling-based optimizations.
+%\mas{why?!!!! what is novel about it that makes it better?!} than $Sela$ in our test experiments.
+%

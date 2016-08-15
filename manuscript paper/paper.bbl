@@ -1,0 +1,227 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI~\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem{DBLP:journals/debu/BarbaraDFHHIJJNPRS97}
+Barbar{\'{a}}, D., DuMouchel, W., Faloutsos, C., Haas, P.J., Hellerstein, J.M.,
+  Ioannidis, Y.E., Jagadish, H.V., Johnson, T., Ng, R.T., Poosala, V., Ross,
+  K.A., Sevcik, K.C.: The new jersey data reduction report.
+\newblock {IEEE} Data Eng. Bull. \textbf{20}(4), 3--45 (1997)
+
+\bibitem{DBLP:conf/icml/BubeckWV13}
+Bubeck, S., Wang, T., Viswanathan, N.: Multiple identifications in multi-armed
+  bandits.
+\newblock In: Proceedings of the 30th International Conference on Machine
+  Learning, {ICML} 2013, Atlanta, GA, USA, 16-21 June 2013, pp. 258--265
+  (2013).
+\newblock \urlprefix\url{http://jmlr.org/proceedings/papers/v28/bubeck13.html}
+
+\bibitem{DBLP:conf/pods/CharikarCMN00}
+Charikar, M., Chaudhuri, S., Motwani, R., Narasayya, V.R.: Towards estimation
+  error guarantees for distinct values.
+\newblock In: Proceedings of the Nineteenth {ACM} {SIGMOD-SIGACT-SIGART}
+  Symposium on Principles of Database Systems, May 15-17, 2000, Dallas, Texas,
+  {USA}, pp. 268--279 (2000)
+
+\bibitem{Chaudhuri:1998:OQO:275487.275492}
+Chaudhuri, S.: An overview of query optimization in relational systems.
+\newblock In: Proceedings of the Seventeenth ACM SIGACT-SIGMOD-SIGART Symposium
+  on Principles of Database Systems, PODS '98, pp. 34--43. ACM, New York, NY,
+  USA (1998).
+\newblock \doi{10.1145/275487.275492}.
+\newblock \urlprefix\url{http://doi.acm.org/10.1145/275487.275492}
+
+\bibitem{DBLP:conf/sigmod/ChaudhuriMN98}
+Chaudhuri, S., Motwani, R., Narasayya, V.R.: Random sampling for histogram
+  construction: How much is enough?
+\newblock In: {SIGMOD} 1998, Proceedings {ACM} {SIGMOD} International
+  Conference on Management of Data, June 2-4, 1998, Seattle, Washington,
+  {USA.}, pp. 436--447 (1998)
+
+\bibitem{DBLP:journals/tvcg/Fisher07}
+Fisher, D.: Hotmap: Looking at geographic attention.
+\newblock {IEEE} Trans. Vis. Comput. Graph. \textbf{13}(6), 1184--1191 (2007)
+
+\bibitem{Getoor:2001:SEU:375663.375727}
+Getoor, L., Taskar, B., Koller, D.: Selectivity estimation using probabilistic
+  models.
+\newblock In: Proceedings of the 2001 ACM SIGMOD International Conference on
+  Management of Data, SIGMOD '01, pp. 461--472. ACM, New York, NY, USA (2001).
+\newblock \doi{10.1145/375663.375727}.
+\newblock \urlprefix\url{http://doi.acm.org/10.1145/375663.375727}
+
+\bibitem{DBLP:conf/pods/GilbertKMS01}
+Gilbert, A.C., Kotidis, Y., Muthukrishnan, S., Strauss, M.: Optimal and
+  approximate computation of summary statistics for range aggregates.
+\newblock In: Proceedings of the Twentieth {ACM} {SIGACT-SIGMOD-SIGART}
+  Symposium on Principles of Database Systems, May 21-23, 2001, Santa Barbara,
+  California, {USA} (2001)
+
+\bibitem{DBLP:conf/sigmod/GonzalezHJLMSSG10}
+Gonzalez, H., Halevy, A.Y., Jensen, C.S., Langen, A., Madhavan, J., Shapley,
+  R., Shen, W., Goldberg{-}Kidon, J.: Google fusion tables: web-centered data
+  management and collaboration.
+\newblock In: Proceedings of the {ACM} {SIGMOD} International Conference on
+  Management of Data, {SIGMOD} 2010, Indianapolis, Indiana, USA, June 6-10,
+  2010, pp. 1061--1066 (2010)
+
+\bibitem{DBLP:conf/sigmod/HellersteinHW97}
+Hellerstein, J.M., Haas, P.J., Wang, H.J.: Online aggregation.
+\newblock In: {SIGMOD} 1997, Proceedings {ACM} {SIGMOD} International
+  Conference on Management of Data, May 13-15, 1997, Tucson, Arizona, {USA.},
+  pp. 171--182 (1997)
+
+\bibitem{Hou:1991:SEA:115302.115300}
+Hou, W.C., Ozsoyoglu, G.: Statistical estimators for aggregate relational
+  algebra queries.
+\newblock ACM Trans. Database Syst. \textbf{16}(4), 600--654 (1991).
+\newblock \doi{10.1145/115302.115300}.
+\newblock \urlprefix\url{http://doi.acm.org/10.1145/115302.115300}
+
+\bibitem{Hund2016}
+Hund, M., B{\"o}hm, D., Sturm, W., Sedlmair, M., Schreck, T., Ullrich, T.,
+  Keim, D.A., Majnaric, L., Holzinger, A.: Visual analytics for concept
+  exploration in subspaces of patient groups.
+\newblock Brain Informatics pp. 1--15 (2016)
+
+\bibitem{Ioannidis:2003:HH:1315451.1315455}
+Ioannidis, Y.: The history of histograms (abridged).
+\newblock In: Proceedings of the 29th International Conference on Very Large
+  Data Bases - Volume 29, VLDB '03, pp. 19--30. VLDB Endowment (2003).
+\newblock \urlprefix\url{http://dl.acm.org/citation.cfm?id=1315451.1315455}
+
+\bibitem{DBLP:journals/dr/Jagadish99b}
+Jagadish, H.V.: Review - explaining differences in multidimensional aggregates.
+\newblock {ACM} {SIGMOD} Digital Review \textbf{1} (1999)
+
+\bibitem{Jang:2011:LAE:2063576.2063652}
+Jang, M.H., Kim, S.W., Faloutsos, C., Park, S.: A linear-time approximation of
+  the earth mover's distance.
+\newblock In: Proceedings of the 20th ACM International Conference on
+  Information and Knowledge Management, CIKM '11, pp. 505--514. ACM, New York,
+  NY, USA (2011).
+\newblock \doi{10.1145/2063576.2063652}.
+\newblock \urlprefix\url{http://doi.acm.org/10.1145/2063576.2063652}
+
+\bibitem{Jugel:2016:VAV:2884416.2884424}
+Jugel, U., Jerzak, Z., Hackenbroich, G., Markl, V.: Vdda: Automatic
+  visualization-driven data aggregation in relational databases.
+\newblock The VLDB Journal pp. 53--77
+
+\bibitem{kandel2012profiler}
+Kandel, S., Parikh, R., Paepcke, A., Hellerstein, J.M., Heer, J.: Profiler:
+  Integrated statistical analysis and visualization for data quality
+  assessment.
+\newblock In: Proceedings of the International Working Conference on Advanced
+  Visual Interfaces, pp. 547--554. ACM (2012)
+
+\bibitem{DBLP:conf/sigmod/KeyHPA12}
+Key, A., Howe, B., Perry, D., Aragon, C.R.: Vizdeck: self-organizing dashboards
+  for visual analytics.
+\newblock In: Proceedings of the {ACM} {SIGMOD} International Conference on
+  Management of Data, {SIGMOD} 2012, Scottsdale, AZ, USA, May 20-24, 2012, pp.
+  681--684 (2012)
+
+\bibitem{lahdenmaki2005relational}
+Lahdenmaki, T., Leach, M.: Relational Database Index Design and the Optimizers.
+\newblock John Wiley \& Sons (2005)
+
+\bibitem{Lipton:1990:PSE:93597.93611}
+Lipton, R.J., Naughton, J.F., Schneider, D.A.: Practical selectivity estimation
+  through adaptive sampling.
+\newblock In: Proceedings of the 1990 ACM SIGMOD International Conference on
+  Management of Data, SIGMOD '90, pp. 1--11. ACM, New York, NY, USA (1990).
+\newblock \doi{10.1145/93597.93611}.
+\newblock \urlprefix\url{http://doi.acm.org/10.1145/93597.93611}
+
+\bibitem{DBLP:conf/sigmod/LivnyRBCDLMW97}
+Livny, M., Ramakrishnan, R., Beyer, K.S., Chen, G., Donjerkovic, D., Lawande,
+  S., Myllymaki, J., Wenger, R.K.: Devise: Integrated querying and
+  visualization of large datasets.
+\newblock In: {SIGMOD} 1997, Proceedings {ACM} {SIGMOD} International
+  Conference on Management of Data, May 13-15, 1997, Tucson, Arizona, {USA.},
+  pp. 301--312 (1997)
+
+\bibitem{Mackert:1986:ROV:16856.16863}
+Mackert, L.F., Lohman, G.M.: R* optimizer validation and performance evaluation
+  for local queries.
+\newblock SIGMOD Rec. \textbf{15}(2), 84--95 (1986).
+\newblock \doi{10.1145/16856.16863}.
+\newblock \urlprefix\url{http://doi.acm.org/10.1145/16856.16863}
+
+\bibitem{DBLP:journals/tvcg/MackinlayHS07}
+Mackinlay, J.D., Hanrahan, P., Stolte, C.: Show me: Automatic presentation for
+  visual analysis.
+\newblock {IEEE} Trans. Vis. Comput. Graph. \textbf{13}(6), 1137--1144 (2007)
+
+\bibitem{DBLP:journals/csur/ManninoCS88}
+Mannino, M.V., Chu, P., Sager, T.: Statistical profile estimation in database
+  systems.
+\newblock {ACM} Comput. Surv. \textbf{20}(3), 191--221 (1988)
+
+\bibitem{DBLP:conf/sigmod/Piatetsky-ShapiroC84}
+Piatetsky{-}Shapiro, G., Connell, C.: Accurate estimation of the number of
+  tuples satisfying a condition.
+\newblock In: SIGMOD'84, Proceedings of Annual Meeting, Boston, Massachusetts,
+  June 18-21, 1984, pp. 256--276 (1984)
+
+\bibitem{DBLP:conf/vldb/Sarawagi00}
+Sarawagi, S.: User-adaptive exploration of multidimensional data.
+\newblock In: {VLDB} 2000, Proceedings of 26th International Conference on Very
+  Large Data Bases, September 10-14, 2000, Cairo, Egypt, pp. 307--316 (2000)
+
+\bibitem{DBLP:conf/vldb/SatheS01}
+Sathe, G., Sarawagi, S.: Intelligent rollups in multidimensional {OLAP} data.
+\newblock In: {VLDB} 2001, Proceedings of 27th International Conference on Very
+  Large Data Bases, September 11-14, 2001, Roma, Italy, pp. 531--540 (2001)
+
+\bibitem{serfling1974probability}
+Serfling, R.J.: Probability inequalities for the sum in sampling without
+  replacement.
+\newblock The Annals of Statistics pp. 39--48 (1974)
+
+\bibitem{Stillger:2001:LDL:645927.672349}
+Stillger, M., Lohman, G.M., Markl, V., Kandil, M.: Leo - db2's learning
+  optimizer.
+\newblock In: Proceedings of the 27th International Conference on Very Large
+  Data Bases, VLDB '01, pp. 19--28. Morgan Kaufmann Publishers Inc., San
+  Francisco, CA, USA (2001).
+\newblock \urlprefix\url{http://dl.acm.org/citation.cfm?id=645927.672349}
+
+\bibitem{Stolte:2000:PSQ:857190.857686}
+Stolte, C., Hanrahan, P.: Polaris: A system for query, analysis and
+  visualization of multi-dimensional relational databases.
+\newblock In: Proceedings of the IEEE Symposium on Information Vizualization
+  2000, INFOVIS '00, pp. 5--. IEEE Computer Society, Washington, DC, USA
+  (2000).
+\newblock \urlprefix\url{http://dl.acm.org/citation.cfm?id=857190.857686}
+
+\bibitem{vartakseedb}
+Vartak, M., Madden, S., Parameswaran, A., Polyzotis, N.: Seedb: towards
+  automatic query result visualizations.
+\newblock Tech. rep., Technical Report, data-people. cs. illinois.
+  edu/seedb-tr. pdf
+
+\bibitem{DBLP:journals/pvldb/VartakMPP14}
+Vartak, M., Madden, S., Parameswaran, A.G., Polyzotis, N.: {SEEDB:}
+  automatically generating query visualizations.
+\newblock {PVLDB} \textbf{7}(13), 1581--1584 (2014)
+
+\bibitem{DBLP:conf/chi/WongCKRX11}
+Wong, B.L.W., Chen, R., Kodagoda, N., Rooney, C., Xu, K.: {INVISQUE:} intuitive
+  information exploration through interactive visualization.
+\newblock In: Proceedings of the International Conference on Human Factors in
+  Computing Systems, {CHI} 2011, Extended Abstracts Volume, Vancouver, BC,
+  Canada, May 7-12, 2011, pp. 311--316 (2011).
+\newblock \doi{10.1145/1979742.1979720}.
+\newblock \urlprefix\url{http://doi.acm.org/10.1145/1979742.1979720}
+
+\bibitem{Wong2011}
+Wong, B.L.W., Xu, K., Holzinger, A.: Interactive Visualization for Information
+  Analysis in Medical Diagnosis, pp. 109--120 (2011)
+
+\end{thebibliography}
