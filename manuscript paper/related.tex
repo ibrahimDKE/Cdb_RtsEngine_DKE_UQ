@@ -1,17 +1,17 @@
 \section{Related Work}
 \label{sec:related}
 %
-Interactive Data Visualization Tools: have interested the research community over the past few years, and it has presented a number of interactive data analytics tools such as ShowMe, Polaris, and Tableau \cite{kandel2012profiler,DBLP:journals/tvcg/MackinlayHS07,DBLP:conf/sigmod/KeyHPA12,DBLP:journals/tvcg/Fisher07}. 
+Interactive Data Visualization Tools have interested the research community over the past few years, and it has presented a number of interactive data analytics tools such as ShowMe, Polaris, and Tableau \cite{kandel2012profiler,DBLP:journals/tvcg/MackinlayHS07,DBLP:conf/sigmod/KeyHPA12,DBLP:journals/tvcg/Fisher07}. 
 %
 Similar visualization specification tools have also been introduced by the database community, including Fusion Tables \cite{DBLP:conf/sigmod/GonzalezHJLMSSG10} and the Devise \cite{DBLP:conf/sigmod/LivnyRBCDLMW97} toolkit. 
 %
 Unlike SeeDB, which recommends visualizations automatically by exploring the entire views space, these tools place the onus on the analyst to specify the visualization to be generated. For datasets with a large number of attributes, it is unfeasible for the analyst to manually study all the attributes; hence, interactive visualization needs to be augmented with automated visualization techniques.
 %
 
-A few recent systems have attempted to automate some aspects of data analysis and visualization. Profiler is one such automated tool that allows analysts to detect anomalies in data \cite{kandel2012profiler}. Another related tool is VizDeck \cite{DBLP:conf/sigmod/KeyHPA12}, in given a dataset, depicts all possible 2-D visualizations on a dashboard that the user can control by reordering or pinning visualizations. Given that VizDeck generates all visualizations, it is only meant for small datasets; and VizDeck does not discuss techniques to speed-up the generation of these visualizations.
+A few recent systems have attempted to automate some aspects of data analysis and visualization. Profiler is one such automated tool that allows analysts to detect anomalies in data \cite{kandel2012profiler}. Another related tool is VizDeck \cite{DBLP:conf/sigmod/KeyHPA12}, in given a dataset, depicts all possible 2-D visualizations on a dashboard that the user can control by reordering or pinning visualizations. Given that VizDeck generates all visualizations however, it is only meant for small datasets; and VizDeck does not discuss techniques to speed-up the generation of these visualizations.
 %
 
-To support visual sense-making in medical diagnosis, INVISQUE\cite{Wong2011,DBLP:conf/chi/WongCKRX11} is an interactive visualization system proposed such as physical index cards on a two dimensional
+To support visual sense-making in medical diagnosis, INVISQUE \cite{Wong2011,DBLP:conf/chi/WongCKRX11} is an interactive visualization system proposed such as physical index cards on a two dimensional
 workspace. INVISQUE provides some features to support â€˜annotating, re-visiting, and merging two clusters. It discusses essential problems in designing medical diagnostic displays that can improving the review of a patientâ€™s medical history \cite{Wong2011}. A recent work, SubVIS \cite{Hund2016} is a visualization tool which assists the user to analyze and interactively explore computed subspaces to discover insights in highly dimensional and complex patient's datasets. SubVIS \cite{Hund2016} introduces an analysis workflow to visually explore subspace clusters from various perspectives and it tackles some subspace clustering challenges such as difficulty of interpretation patient results, redundancy detection in subspaces and clusters, and multiple clustering results for different parameter settings.    
 %
 
@@ -28,22 +28,22 @@ Although the aforementioned approaches provide assistance in query visualization
 %
 
 \noindent \textbf{Visualizations Pruning in SeeDB:}
-SeeDB implement an execution engine to reduce latency in assessing the collection of 
+SeeDB implemented an execution engine to reduce latency in assessing the collection of 
 aggregate views which it applies two kinds of optimizations: sharing, 
 where aggregate view queries are combined to share computation as much as possible, 
 and pruning, where aggregate view queries corresponding to low utility visualizations 
 are dropped from consideration without scanning the whole dataset. 
-SeeDB developed a phased execution framework,each phase operates on a subset of the dataset. 
-Phase i of n operates on the $i^{th}$ of n equally-sized partitions of the dataset. 
+SeeDB developed a phased execution framework, each phase operates on a subset of the dataset. 
+Phase $i$ of $n$ operates on the $i^{th}$ of $n$ equally-sized partitions of the dataset. 
 %(Empirically, we have found n = 10 to work well, though our results are not very sensitive to the value of n.) 
 %For instance, if we have 100, 000 records and 10 phases, the i = 4th phase 
 %processes records 30, 001 to 40, 000. 
 The execution engine begins with the entire set of aggregate views as follows:
-• During phase i,the SeeDB \cite{DBLP:journals/pvldb/VartakMPP14} modifies partial results for the views still under consideration 
+During phase i,the SeeDB \cite{DBLP:journals/pvldb/VartakMPP14} modifies partial results for the views still under consideration 
 using the $i^{th}$ fraction of the dataset. 
 The execution engine applies sharing-based optimizations to minimize scans on this $i^{th}$ fraction 
 of the dataset.
-• At the end of phase i,the execution engine uses pruning-based optimizations to determine which aggregate views to discard. The partial results of each aggregate view on the fractions from 1 through i are used to estimate the quality of each view, and the views with low utility are discarded.
+At the end of phase $i$, the execution engine uses pruning-based optimizations to determine which aggregate views to discard. The partial results of each aggregate view on the fractions from 1 through $i$ are used to estimate the quality of each view, and the views with low utility are discarded.
 
 The execution engine uses pruning optimizations to determine 
 which aggregate views to discard. Specifically, partial results for each 
@@ -58,7 +58,7 @@ uses multi-armed bandit allocation strategies to find top utility views.\\
  it keeps an estimate of the mean utility for every aggregate view $V_i$ and a confidence 
  interval around that mean. At the end of a phase, it applies the following rule to 
  prune low-utility views: If the upper bound of the utility of view $V_i$ is less than the lower bound 
- of the utility of k or more views, then $V_i$ is discarded. 
+ of the utility of $k$ or more views, then $V_i$ is discarded. 
 \item {Multi-Armed Bandit Pruning:} Second pruning scheme employs a Multi-Armed Bandit strategy (MAB)
 \cite{DBLP:journals/pvldb/VartakMPP14,DBLP:conf/icml/BubeckWV13}. 
 In MAB, an online algorithm repeatedly chooses from a set of alternatives over 
@@ -68,10 +68,10 @@ visualizations (arms) with the highest utility (reward).
 Specifically, SeeDB adapts the Successive Accepts and Rejects algorithm from \cite{DBLP:conf/icml/BubeckWV13}
 to find arms with the highest mean reward. At the end of every 
 phase, views that are still under consideration are ranked in order of their 
-utility means. We then compute two differences between the utility means: $\Delta {1} $is the difference 
+utility means. Then it computes two differences between the utility means: $\Delta {1} $ is the difference 
 between the highest mean and the $k + 1^{st}$ highest mean, and $\Delta{n}$ is the difference between 
 the lowest mean and the ${k}^{th}$ highest mean. If $\Delta {1}$ is greater than $ \Delta{n}$, the view with the 
-highest mean is “accepted” as being part of the top-k (and it no longer participates in pruning computations). 
+highest mean is accepted as being part of the top-k (and it no longer participates in pruning computations). 
 On the other hand, if $ \Delta{n}$ is higher, the view with the lowest mean is discarded from the set of 
 views in the running. [6] proves that under certain assumptions about reward distributions, 
 the above technique identifies the top-k arms with high probability.
@@ -85,13 +85,13 @@ the above technique identifies the top-k arms with high probability.
   optimizations. \\
 	
 \noindent \textbf {Offline visualizations in SeeDB: }
-SeeDB prunes redundant views \cite {DBLP:journals/pvldb/VartakMPP14} : (1) For each table, it first determines 
-the entire space of aggregate views. (2) Next, it prunes all 
-aggregate views containing attributes with 0 or low variance since corresponding 
-visualizations are unlikely to be interesting. (3) For each remaining view $V_i$, SeeDB computes
- the distribution for reference views on the entire dataset . 
- (4) The resulting distributions are then clustered based on pairwise correlation. 
- (5) From each cluster, SeeDB selects one view to compute as a cluster representative and 
- store “stubs” of clustered views for sub- sequent use. At run time, the view generator accesses 
+SeeDB prunes redundant views \cite {DBLP:journals/pvldb/VartakMPP14} : For each table, it first determines 
+the entire space of aggregate views. Next, it prunes all 
+aggregate views containing attributes with $0$ or low variance since corresponding 
+visualizations are unlikely to be interesting. For each remaining view $V_i$, SeeDB computes
+ the distribution for reference views on the entire dataset. 
+ The resulting distributions are then clustered based on pairwise correlation. 
+ From each cluster, SeeDB selects one view to compute as a cluster representative and 
+ store stubs of clustered views for sub-sequent use. At run time, the view generator accesses 
  previously generated view stubs, removes redundant views and passes the remaining stubs 
  to the execution engine. 

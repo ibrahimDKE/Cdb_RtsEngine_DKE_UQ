@@ -10,7 +10,7 @@ set (e.g. the entire dataset $D$) and suggest a set of visualizations that are l
 to be interesting and score high deviation utilities in certain realtime limits 
 such as maximum number of explored visualizations and execution time.
 The proposed approaches are based on our observations about 
-the difference between the number of distinct values in the dimension attribute in 
+the difference between the number of distinct values in the dimension attributes in 
 the results set $DQ$ and the entire dataset $D$ affects on the deviation measures. 
 In addition, other statistical features may also affect such as data distribution 
 and selectivity; such features will be discussed in more detail in the next subsections.
@@ -386,7 +386,7 @@ In case of execution time limit $tl$, $Sela$ returns an ordered set of attribute
 \label{sec:priority_hist}
 %
 \begin{algorithm}[t]
-\label{alg:prio_hist}
+\label{alg:prio_hist1}
 \caption{$DimsHisto$}
 \KwIn{ Attributes $A(a_1, a_2, ..., a_n)$ , Query $Q$, Views limit $R$ }
 \KwOut{Set $\mathcal{H}$: Highest priorities of dimension attributes}

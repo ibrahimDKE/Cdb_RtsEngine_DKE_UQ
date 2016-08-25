@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.25)  15 AUG 2016 16:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.25)  25 AUG 2016 16:18
 entering extended mode
 **paper.tex
-(C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission\paper.tex
+("C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission - Copy\paper.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, arabic, armenian, assamese, basque, bengali
 , bokmal, bulgarian, catalan, coptic, croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, galic
@@ -16,13 +16,13 @@ Package: fix-cm 2006/09/13 v1.1m fixes to LaTeX
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1enc.def"
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 ))
-(C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission\svjour3.cls
+("C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission - Copy\svjour3.cls"
 Document Class: svjour3 2007/05/08 v3.2 
 LaTeX document class for Springer journals
 Class Springer-SVJour3 Info: extra/valid Springer sub-package (-> *.clo) 
 (Springer-SVJour3)           not found in option list of \documentclass
 (Springer-SVJour3)           - autoactivating "global" style.
-(C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission\svglov3.clo
+("C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission - Copy\svglov3.clo"
 File: svglov3.clo 2009/12/18 v3.2 style option for standardised journals
 
 SVJour Class option: svglov3.clo for standardised journals
@@ -385,7 +385,7 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
 )
-(C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission\paper.aux)
+("C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission - Copy\paper.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
 LaTeX Font Info:    ... okay on input line 74.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
@@ -436,13 +436,14 @@ LaTeX Info: Redefining \ref on input line 74.
 LaTeX Info: Redefining \pageref on input line 74.
 LaTeX Info: Redefining \nameref on input line 74.
 
-(C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission\paper.out)
-(C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission\paper.out)
+("C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission - Copy\paper.out")
+("C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission - Copy\paper.out")
 \@outlinefile=\write3
 
 SVJour3 warning: Missing \journalname
-(C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission\abstract.tex [1{C:/Users/uqiibra2/AppData/Local/Mi
-KTeX/2.9/pdftex/config/pdftex.map}]) (C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission\intro2.tex
+("C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission - Copy\abstract.tex" [1{C:/Users/uqiibra2/AppData
+/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
+("C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission - Copy\intro2.tex"
 <gocard_schemaandsample.png, id=57, 703.9098pt x 264.5082pt>
 File: gocard_schemaandsample.png Graphic file (type png)
  <use gocard_schemaandsample.png>
@@ -460,11 +461,12 @@ File: chart_gocard_ex.png Graphic file (type png)
  <use chart_gocard_ex.png>
 Package pdftex.def Info: chart_gocard_ex.png used on input line 134.
 (pdftex.def)             Requested size: 152.09897pt x 97.84364pt.
- [3 <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/gocard_schemaandsample.png>]
+ [3 <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/gocard_schemaandsample.png>]
 Missing character: There is no Â in font cmr10!
 Missing character: There is no ’ in font cmr10!
- [4 <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/table_gocard_ex.png> <C:/Users/uqiibra2/Dropbo
-x/to_Ibrahim/kais-16_second_draft/submission/chart_gocard_ex.png>] <example.png, id=105, 866.73106pt x 272.217pt>
+ [4 <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/table_gocard_ex.png> <C:/Users/uqiibra2
+/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/chart_gocard_ex.png>] <example.png, id=105, 866.73106pt x 272
+.217pt>
 File: example.png Graphic file (type png)
  <use example.png>
 Package pdftex.def Info: example.png used on input line 216.
@@ -479,11 +481,8 @@ Overfull \hbox (13.2334pt too wide) in paragraph at lines 278--281
 0 ($\OML/cmm/m/it/10 RtSEngine$\OT1/cmr/m/n/10 )
  []
 
-[5 <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/example.png>]
-
-LaTeX Warning: Reference `sec:expr' on page 6 undefined on input line 295.
-
-) (C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission\related.tex
+[5 <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/example.png>])
+("C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission - Copy\related.tex"
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ˜ in font cmr10!
@@ -495,24 +494,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--29
 
  []
 
-Missing character: There is no • in font cmr10!
-Missing character: There is no • in font cmr10!
 
 Underfull \hbox (badness 10000) in paragraph at lines 48--54
 
  []
 
 [7]
-Missing character: There is no “ in font cmr10!
-Missing character: There is no ” in font cmr10!
-
 Underfull \hbox (badness 10000) in paragraph at lines 81--86
 
  []
 
-Missing character: There is no “ in font cmr10!
-Missing character: There is no ” in font cmr10!
-) (C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission\prelim2.tex [8]
+) ("C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission - Copy\prelim2.tex" [8]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 59.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
@@ -521,7 +513,7 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 59.
  [9])
-(C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission\method.tex [10]
+("C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission - Copy\method.tex" [10]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
@@ -530,62 +522,54 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
 
-<arch_new.png, id=225, 737.75626pt x 313.9228pt>
+<arch_new.png, id=226, 737.75626pt x 313.9228pt>
 File: arch_new.png Graphic file (type png)
  <use arch_new.png>
 Package pdftex.def Info: arch_new.png used on input line 28.
 (pdftex.def)             Requested size: 338.0pt x 143.82184pt.
- [11 <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/arch_new.png>]) (C:\Users\uqiibra2\Dropbox\to
-_Ibrahim\kais-16_second_draft\submission\pro_est.tex
-[12] [13] [14] [15] [16]
+ [11 <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/arch_new.png>])
+("C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission - Copy\pro_est.tex" [12] [13] [14] [15] [16]
 Missing character: There is no Â in font cmr10!
 Missing character: There is no … in font cmr10!
- [17]) (C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission\cost_est.tex
-[18] [19]
+
+[17]) ("C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission - Copy\cost_est.tex" [18] [19]
 Overfull \hbox (4.53468pt too wide) in paragraph at lines 145--156
 []\OT1/cmr/m/n/10 As men-tioned pre-vi-ously, the cost of run-ning a view $\OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 (\OML/cmm
 /m/it/10 a; m; f\OT1/cmr/m/n/10 )$ on a database
  []
 
-[20]) (C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission\testbed.tex [21]
-
-Package caption Warning: \label without proper \caption on input line 389.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `alg:prio_hist' on page 22 undefined on input line 62.
-
-[22]) (C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission\results.tex
-(C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission\results_aggregatefunctions.tex
-<SumA2.pdf, id=420, 312.16624pt x 226.8475pt>
+[20]) ("C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission - Copy\testbed.tex" [21] [22])
+("C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission - Copy\results.tex"
+("C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission - Copy\results_aggregatefunctions.tex"
+<SumA2.pdf, id=421, 312.16624pt x 226.8475pt>
 File: SumA2.pdf Graphic file (type pdf)
  <use SumA2.pdf>
 Package pdftex.def Info: SumA2.pdf used on input line 40.
 (pdftex.def)             Requested size: 108.16248pt x 78.59822pt.
- <AvgA2.pdf, id=421, 312.16624pt x 226.8475pt>
+ <AvgA2.pdf, id=422, 312.16624pt x 226.8475pt>
 File: AvgA2.pdf Graphic file (type pdf)
 
 <use AvgA2.pdf>
 Package pdftex.def Info: AvgA2.pdf used on input line 46.
 (pdftex.def)             Requested size: 108.16248pt x 78.59822pt.
- <CountA2.pdf, id=422, 312.16624pt x 226.8475pt>
+ <CountA2.pdf, id=423, 312.16624pt x 226.8475pt>
 File: CountA2.pdf Graphic file (type pdf)
  <use CountA2.pdf>
 Package pdftex.def Info: CountA2.pdf used on input line 51.
 (pdftex.def)             Requested size: 108.16248pt x 78.59822pt.
  [23]
-<SumD2.pdf, id=434, 312.16624pt x 226.8475pt>
+<SumD2.pdf, id=436, 312.16624pt x 226.8475pt>
 File: SumD2.pdf Graphic file (type pdf)
  <use SumD2.pdf>
 Package pdftex.def Info: SumD2.pdf used on input line 60.
 (pdftex.def)             Requested size: 108.16248pt x 78.59822pt.
- <AvgD2.pdf, id=435, 312.16624pt x 226.8475pt>
+ <AvgD2.pdf, id=437, 312.16624pt x 226.8475pt>
 File: AvgD2.pdf Graphic file (type pdf)
 
 <use AvgD2.pdf>
 Package pdftex.def Info: AvgD2.pdf used on input line 66.
 (pdftex.def)             Requested size: 108.16248pt x 78.59822pt.
- <CountD2.pdf, id=436, 312.16624pt x 226.8475pt>
+ <CountD2.pdf, id=438, 312.16624pt x 226.8475pt>
 File: CountD2.pdf Graphic file (type pdf)
  <use CountD2.pdf>
 Package pdftex.def Info: CountD2.pdf used on input line 71.
@@ -596,24 +580,24 @@ Overfull \hbox (14.50958pt too wide) in paragraph at lines 78--81
 \OT1/cmr/m/n/10 .
  []
 
-<MaxA2.pdf, id=442, 312.16624pt x 226.8475pt>
+<MaxA2.pdf, id=444, 312.16624pt x 226.8475pt>
 File: MaxA2.pdf Graphic file (type pdf)
  <use MaxA2.pdf>
 Package pdftex.def Info: MaxA2.pdf used on input line 86.
 (pdftex.def)             Requested size: 141.95938pt x 103.16039pt.
- <MinA2.pdf, id=443, 312.16624pt x 226.8475pt>
+ <MinA2.pdf, id=445, 312.16624pt x 226.8475pt>
 File: MinA2.pdf Graphic file (type pdf)
 
 <use MinA2.pdf>
 Package pdftex.def Info: MinA2.pdf used on input line 92.
 (pdftex.def)             Requested size: 141.95938pt x 103.16039pt.
- <MaxD2.pdf, id=444, 312.16624pt x 226.8475pt>
+ <MaxD2.pdf, id=446, 312.16624pt x 226.8475pt>
 File: MaxD2.pdf Graphic file (type pdf)
  <use MaxD2.pdf>
 Package pdftex.def Info: MaxD2.pdf used on input line 107.
 (pdftex.def)             Requested size: 141.95938pt x 103.16039pt.
 
-<MinD2.pdf, id=445, 312.16624pt x 226.8475pt>
+<MinD2.pdf, id=447, 312.16624pt x 226.8475pt>
 File: MinD2.pdf Graphic file (type pdf)
  <use MinD2.pdf>
 Package pdftex.def Info: MinD2.pdf used on input line 113.
@@ -621,39 +605,39 @@ Package pdftex.def Info: MinD2.pdf used on input line 113.
 
 Underfull \vbox (badness 1210) has occurred while \output is active []
 
- [24 <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/SumA2.pdf> <C:/Users/uqiibra2/Dropbox/to_Ibra
-him/kais-16_second_draft/submission/AvgA2.pdf
+ [24 <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/SumA2.pdf> <C:/Users/uqiibra2/Dropbox/
+to_Ibrahim/kais-16_second_draft/submission - Copy/AvgA2.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/AvgA2.pdf): PDF 
-inclusion: multiple pdfs with page group included in a single page
-> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/CountA2.pdf
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/AvgA2.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/CountA2.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/CountA2.pdf): PD
-F inclusion: multiple pdfs with page group included in a single page
-> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/SumD2.pdf
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/CountA2.p
+df): PDF inclusion: multiple pdfs with page group included in a single page
+> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/SumD2.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/SumD2.pdf): PDF 
-inclusion: multiple pdfs with page group included in a single page
-> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/AvgD2.pdf
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/SumD2.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/AvgD2.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/AvgD2.pdf): PDF 
-inclusion: multiple pdfs with page group included in a single page
-> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/CountD2.pdf
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/AvgD2.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/CountD2.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/CountD2.pdf): PD
-F inclusion: multiple pdfs with page group included in a single page
->] <SumA1.pdf, id=601, 312.16624pt x 226.8475pt>
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/CountD2.p
+df): PDF inclusion: multiple pdfs with page group included in a single page
+>] <SumA1.pdf, id=603, 312.16624pt x 226.8475pt>
 File: SumA1.pdf Graphic file (type pdf)
  <use SumA1.pdf>
 Package pdftex.def Info: SumA1.pdf used on input line 151.
 (pdftex.def)             Requested size: 108.16248pt x 78.59822pt.
- <AvgA1.pdf, id=602, 312.16624pt x 226.8475pt>
+ <AvgA1.pdf, id=604, 312.16624pt x 226.8475pt>
 File: AvgA1.pdf Graphic file (type pdf)
 
 <use AvgA1.pdf>
 Package pdftex.def Info: AvgA1.pdf used on input line 157.
 (pdftex.def)             Requested size: 108.16248pt x 78.59822pt.
- <CountA1.pdf, id=603, 312.16624pt x 226.8475pt>
+ <CountA1.pdf, id=605, 312.16624pt x 226.8475pt>
 File: CountA1.pdf Graphic file (type pdf)
  <use CountA1.pdf>
 Package pdftex.def Info: CountA1.pdf used on input line 162.
@@ -661,119 +645,97 @@ Package pdftex.def Info: CountA1.pdf used on input line 162.
 
 Underfull \vbox (badness 1622) has occurred while \output is active []
 
- [25 <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/MaxA2.pdf> <C:/Users/uqiibra2/Dropbox/to_Ibra
-him/kais-16_second_draft/submission/MinA2.pdf
+ [25 <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/MaxA2.pdf> <C:/Users/uqiibra2/Dropbox/
+to_Ibrahim/kais-16_second_draft/submission - Copy/MinA2.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/MinA2.pdf): PDF 
-inclusion: multiple pdfs with page group included in a single page
-> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/MaxD2.pdf
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/MinA2.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/MaxD2.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/MaxD2.pdf): PDF 
-inclusion: multiple pdfs with page group included in a single page
-> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/MinD2.pdf
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/MaxD2.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/MinD2.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/MinD2.pdf): PDF 
-inclusion: multiple pdfs with page group included in a single page
->] <SumD1.pdf, id=707, 312.16624pt x 226.8475pt>
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/MinD2.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+>] <SumD1.pdf, id=709, 312.16624pt x 226.8475pt>
 File: SumD1.pdf Graphic file (type pdf)
  <use SumD1.pdf>
 Package pdftex.def Info: SumD1.pdf used on input line 177.
 (pdftex.def)             Requested size: 108.16248pt x 78.59822pt.
- <AvgD1.pdf, id=708, 312.16624pt x 226.8475pt>
+ <AvgD1.pdf, id=710, 312.16624pt x 226.8475pt>
 File: AvgD1.pdf Graphic file (type pdf)
 
 <use AvgD1.pdf>
 Package pdftex.def Info: AvgD1.pdf used on input line 183.
 (pdftex.def)             Requested size: 108.16248pt x 78.59822pt.
-
-! Undefined control sequence.
-<argument>  \textt 
-                   {avg} 
-l.184      \caption{ \textt{avg} }
-                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument>  \textt 
-                   {avg} 
-l.184      \caption{ \textt{avg} }
-                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-<CountD1.pdf, id=709, 312.16624pt x 226.8475pt>
+ <CountD1.pdf, id=711, 312.16624pt x 226.8475pt>
 File: CountD1.pdf Graphic file (type pdf)
  <use CountD1.pdf>
 Package pdftex.def Info: CountD1.pdf used on input line 188.
 (pdftex.def)             Requested size: 108.16248pt x 78.59822pt.
- <MaxA1.pdf, id=710, 312.16624pt x 226.8475pt>
-File: MaxA1.pdf Graphic file (type pdf)
 
-<use MaxA1.pdf>
+<MaxA1.pdf, id=712, 312.16624pt x 226.8475pt>
+File: MaxA1.pdf Graphic file (type pdf)
+ <use MaxA1.pdf>
 Package pdftex.def Info: MaxA1.pdf used on input line 202.
 (pdftex.def)             Requested size: 141.95938pt x 103.16039pt.
- <MinA1.pdf, id=711, 312.16624pt x 226.8475pt>
+ <MinA1.pdf, id=713, 312.16624pt x 226.8475pt>
 File: MinA1.pdf Graphic file (type pdf)
- <use MinA1.pdf>
+
+<use MinA1.pdf>
 Package pdftex.def Info: MinA1.pdf used on input line 208.
 (pdftex.def)             Requested size: 141.95938pt x 103.16039pt.
-
-<MaxD1.pdf, id=712, 312.16624pt x 226.8475pt>
+ <MaxD1.pdf, id=714, 312.16624pt x 226.8475pt>
 File: MaxD1.pdf Graphic file (type pdf)
  <use MaxD1.pdf>
 Package pdftex.def Info: MaxD1.pdf used on input line 222.
 (pdftex.def)             Requested size: 141.95938pt x 103.16039pt.
- <MinD1.pdf, id=713, 312.16624pt x 226.8475pt>
-File: MinD1.pdf Graphic file (type pdf)
 
-<use MinD1.pdf>
+<MinD1.pdf, id=715, 312.16624pt x 226.8475pt>
+File: MinD1.pdf Graphic file (type pdf)
+ <use MinD1.pdf>
 Package pdftex.def Info: MinD1.pdf used on input line 228.
 (pdftex.def)             Requested size: 141.95938pt x 103.16039pt.
-) (C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission\results_acc.tex
+)
+("C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission - Copy\results_acc.tex"
 Underfull \vbox (badness 1460) has occurred while \output is active []
 
- [26 <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/SumA1.pdf> <C:/Users/uqiibra2/Dropbox/to_Ibra
-him/kais-16_second_draft/submission/AvgA1.pdf
+ [26 <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/SumA1.pdf> <C:/Users/uqiibra2/Dropbox/
+to_Ibrahim/kais-16_second_draft/submission - Copy/AvgA1.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/AvgA1.pdf): PDF 
-inclusion: multiple pdfs with page group included in a single page
-> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/CountA1.pdf
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/AvgA1.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/CountA1.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/CountA1.pdf): PD
-F inclusion: multiple pdfs with page group included in a single page
-> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/SumD1.pdf
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/CountA1.p
+df): PDF inclusion: multiple pdfs with page group included in a single page
+> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/SumD1.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/SumD1.pdf): PDF 
-inclusion: multiple pdfs with page group included in a single page
-> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/AvgD1.pdf
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/SumD1.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/AvgD1.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/AvgD1.pdf): PDF 
-inclusion: multiple pdfs with page group included in a single page
-> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/CountD1.pdf
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/AvgD1.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/CountD1.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/CountD1.pdf): PD
-F inclusion: multiple pdfs with page group included in a single page
-> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/MaxA1.pdf
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/CountD1.p
+df): PDF inclusion: multiple pdfs with page group included in a single page
+> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/MaxA1.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/MaxA1.pdf): PDF 
-inclusion: multiple pdfs with page group included in a single page
-> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/MinA1.pdf
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/MaxA1.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/MinA1.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/MinA1.pdf): PDF 
-inclusion: multiple pdfs with page group included in a single page
->] <21.pdf, id=897, 312.16624pt x 226.8475pt>
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/MinA1.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+>] <21.pdf, id=899, 312.16624pt x 226.8475pt>
 File: 21.pdf Graphic file (type pdf)
  <use 21.pdf>
 Package pdftex.def Info: 21.pdf used on input line 41.
 (pdftex.def)             Requested size: 141.95938pt x 103.16039pt.
- <22.pdf, id=898, 312.16624pt x 226.8475pt>
+ <22.pdf, id=900, 312.16624pt x 226.8475pt>
 File: 22.pdf Graphic file (type pdf)
  <use 22.pdf>
 Package pdftex.def Info: 22.pdf used on input line 47.
@@ -784,151 +746,151 @@ Overfull \hbox (16.10707pt too wide) in paragraph at lines 61--77
 /m/n/10 , $\OML/cmm/m/it/10 DiffDVal$\OT1/cmr/m/n/10 ,
  []
 
-<11.pdf, id=903, 312.16624pt x 226.8475pt>
+<11.pdf, id=905, 312.16624pt x 226.8475pt>
 File: 11.pdf Graphic file (type pdf)
  <use 11.pdf>
 Package pdftex.def Info: 11.pdf used on input line 93.
 (pdftex.def)             Requested size: 141.95938pt x 103.16039pt.
- <12.pdf, id=904, 312.16624pt x 226.8475pt>
+ <12.pdf, id=906, 312.16624pt x 226.8475pt>
 File: 12.pdf Graphic file (type pdf)
  <use 12.pdf>
 Package pdftex.def Info: 12.pdf used on input line 99.
 (pdftex.def)             Requested size: 141.95938pt x 103.16039pt.
- [27 <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/MaxD1.pdf> <C:/Users/uqiibra2/Dropbox/to_Ibra
-him/kais-16_second_draft/submission/MinD1.pdf
+ [27 <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/MaxD1.pdf> <C:/Users/uqiibra2/Dropbox/
+to_Ibrahim/kais-16_second_draft/submission - Copy/MinD1.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/MinD1.pdf): PDF 
-inclusion: multiple pdfs with page group included in a single page
->]) (C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission\results_eff.tex [28 <C:/Users/uqiibra2/Dropbox
-/to_Ibrahim/kais-16_second_draft/submission/21.pdf> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submissio
-n/22.pdf
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/MinD1.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+>]) ("C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission - Copy\results_eff.tex" [28 <C:/Users/uqiibra
+2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/21.pdf> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second
+_draft/submission - Copy/22.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/22.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
-> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/11.pdf
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/22.pdf): 
+PDF inclusion: multiple pdfs with page group included in a single page
+> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/11.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/11.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
-> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/12.pdf
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/11.pdf): 
+PDF inclusion: multiple pdfs with page group included in a single page
+> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/12.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/12.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
->] <33.pdf, id=1057, 312.16624pt x 226.8475pt>
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/12.pdf): 
+PDF inclusion: multiple pdfs with page group included in a single page
+>] <33.pdf, id=1059, 312.16624pt x 226.8475pt>
 File: 33.pdf Graphic file (type pdf)
  <use 33.pdf>
 Package pdftex.def Info: 33.pdf used on input line 32.
 (pdftex.def)             Requested size: 141.95938pt x 103.16039pt.
- <34.pdf, id=1058, 312.16624pt x 226.8475pt>
+ <34.pdf, id=1060, 312.16624pt x 226.8475pt>
 File: 34.pdf Graphic file (type pdf)
  <use 34.pdf>
 Package pdftex.def Info: 34.pdf used on input line 38.
 (pdftex.def)             Requested size: 141.95938pt x 103.16039pt.
 
-<31.pdf, id=1060, 312.16624pt x 226.8475pt>
+<31.pdf, id=1062, 312.16624pt x 226.8475pt>
 File: 31.pdf Graphic file (type pdf)
  <use 31.pdf>
 Package pdftex.def Info: 31.pdf used on input line 58.
 (pdftex.def)             Requested size: 141.95938pt x 103.16039pt.
- <32.pdf, id=1061, 312.16624pt x 226.8475pt>
+ <32.pdf, id=1063, 312.16624pt x 226.8475pt>
 File: 32.pdf Graphic file (type pdf)
  <use 32.pdf>
 Package pdftex.def Info: 32.pdf used on input line 64.
 (pdftex.def)             Requested size: 141.95938pt x 103.16039pt.
 )
-(C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission\results_timelimit.tex [29 <C:/Users/uqiibra2/Dropb
-ox/to_Ibrahim/kais-16_second_draft/submission/33.pdf> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submiss
-ion/34.pdf
+("C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission - Copy\results_timelimit.tex" [29 <C:/Users/uqiib
+ra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/33.pdf> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_seco
+nd_draft/submission - Copy/34.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/34.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
->] [30 <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/31.pdf> <C:/Users/uqiibra2/Dropbox/to_Ibrah
-im/kais-16_second_draft/submission/32.pdf
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/34.pdf): 
+PDF inclusion: multiple pdfs with page group included in a single page
+>] [30 <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/31.pdf> <C:/Users/uqiibra2/Dropbox/t
+o_Ibrahim/kais-16_second_draft/submission - Copy/32.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/32.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
->] <tl1.pdf, id=1168, 312.16624pt x 226.8475pt>
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/32.pdf): 
+PDF inclusion: multiple pdfs with page group included in a single page
+>] <tl1.pdf, id=1170, 312.16624pt x 226.8475pt>
 File: tl1.pdf Graphic file (type pdf)
  <use tl1.pdf>
 Package pdftex.def Info: tl1.pdf used on input line 65.
 (pdftex.def)             Requested size: 108.16248pt x 78.59822pt.
- <tl11.pdf, id=1169, 312.16624pt x 226.8475pt>
+ <tl11.pdf, id=1171, 312.16624pt x 226.8475pt>
 File: tl11.pdf Graphic file (type pdf)
 
 <use tl11.pdf>
 Package pdftex.def Info: tl11.pdf used on input line 70.
 (pdftex.def)             Requested size: 108.16248pt x 78.59822pt.
- <tl2.pdf, id=1170, 312.16624pt x 226.8475pt>
+ <tl2.pdf, id=1172, 312.16624pt x 226.8475pt>
 File: tl2.pdf Graphic file (type pdf)
  <use tl2.pdf>
 Package pdftex.def Info: tl2.pdf used on input line 76.
 (pdftex.def)             Requested size: 108.16248pt x 78.59822pt.
- <tl3.pdf, id=1171, 312.16624pt x 226.8475pt>
+ <tl3.pdf, id=1173, 312.16624pt x 226.8475pt>
 File: tl3.pdf Graphic file (type pdf)
 
 <use tl3.pdf>
 Package pdftex.def Info: tl3.pdf used on input line 106.
 (pdftex.def)             Requested size: 108.16248pt x 78.59822pt.
- <tl31.pdf, id=1172, 312.16624pt x 226.8475pt>
+ <tl31.pdf, id=1174, 312.16624pt x 226.8475pt>
 File: tl31.pdf Graphic file (type pdf)
  <use tl31.pdf>
 Package pdftex.def Info: tl31.pdf used on input line 111.
 (pdftex.def)             Requested size: 108.16248pt x 78.59822pt.
- <tl4.pdf, id=1173, 312.16624pt x 226.8475pt>
+ <tl4.pdf, id=1175, 312.16624pt x 226.8475pt>
 File: tl4.pdf Graphic file (type pdf)
 
 <use tl4.pdf>
 Package pdftex.def Info: tl4.pdf used on input line 117.
 (pdftex.def)             Requested size: 108.16248pt x 78.59822pt.
-) (C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission\results_cost.tex
+) ("C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission - Copy\results_cost.tex"
 Overfull \hbox (3.1814pt too wide) in paragraph at lines 124--1
 \OT1/cmr/m/n/10 the ac-cu-racy of the al-go-rithms $\OML/cmm/m/it/10 Sela$ \OT1/cmr/m/n/10 , $\OML/cmm/m/it/10 N \OMS/cm
 sy/m/n/10   \OML/cmm/m/it/10 N[]$\OT1/cmr/m/n/10 , $\OML/cmm/m/it/10 DimHisto$\OT1/cmr/m/n/10 , and $\OML/cmm/m/it/10 Se
 eDBTimelimit$
  []
 
-[31 <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/tl1.pdf> <C:/Users/uqiibra2/Dropbox/to_Ibrahim
-/kais-16_second_draft/submission/tl11.pdf
+[31 <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/tl1.pdf> <C:/Users/uqiibra2/Dropbox/to_
+Ibrahim/kais-16_second_draft/submission - Copy/tl11.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/tl11.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
-> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/tl2.pdf
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/tl11.pdf)
+: PDF inclusion: multiple pdfs with page group included in a single page
+> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/tl2.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/tl2.pdf): PDF in
-clusion: multiple pdfs with page group included in a single page
-> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/tl3.pdf
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/tl2.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/tl3.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/tl3.pdf): PDF in
-clusion: multiple pdfs with page group included in a single page
-> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/tl31.pdf
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/tl3.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/tl31.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/tl31.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
-> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/tl4.pdf
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/tl31.pdf)
+: PDF inclusion: multiple pdfs with page group included in a single page
+> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/tl4.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/tl4.pdf): PDF in
-clusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/tl4.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
 >]
 
 LaTeX Warning: Reference `sec:' on page 32 undefined on input line 4.
 
-<Cost11.pdf, id=1318, 312.16624pt x 226.8475pt>
+<Cost11.pdf, id=1320, 312.16624pt x 226.8475pt>
 File: Cost11.pdf Graphic file (type pdf)
  <use Cost11.pdf>
 Package pdftex.def Info: Cost11.pdf used on input line 49.
 (pdftex.def)             Requested size: 108.16248pt x 78.59822pt.
- <Cost12.pdf, id=1319, 312.16624pt x 226.8475pt>
+ <Cost12.pdf, id=1321, 312.16624pt x 226.8475pt>
 File: Cost12.pdf Graphic file (type pdf)
 
 <use Cost12.pdf>
 Package pdftex.def Info: Cost12.pdf used on input line 54.
 (pdftex.def)             Requested size: 108.16248pt x 78.59822pt.
- <Cost21.pdf, id=1320, 312.16624pt x 226.8475pt>
+ <Cost21.pdf, id=1322, 312.16624pt x 226.8475pt>
 File: Cost21.pdf Graphic file (type pdf)
  <use Cost21.pdf>
 Package pdftex.def Info: Cost21.pdf used on input line 60.
 (pdftex.def)             Requested size: 108.16248pt x 78.59822pt.
  [32]))
-(C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission\conc.tex
+("C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission - Copy\conc.tex"
 Missing character: There is no Â in font cmr10!
 Missing character: There is no ’ in font cmr10!
 )
@@ -936,21 +898,21 @@ Overfull \hbox (0.66727pt too wide) in paragraph at lines 25--162
 []\OT1/cmr/m/n/10 Finally, we con-ducted com-par-a-tive ex-per-i-ments and demon-strated the qual-
  []
 
-[33 <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/Cost11.pdf> <C:/Users/uqiibra2/Dropbox/to_Ibra
-him/kais-16_second_draft/submission/Cost12.pdf
+[33 <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/Cost11.pdf> <C:/Users/uqiibra2/Dropbox/
+to_Ibrahim/kais-16_second_draft/submission - Copy/Cost12.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/Cost12.pdf): PDF
- inclusion: multiple pdfs with page group included in a single page
-> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/Cost21.pdf
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/Cost12.pd
+f): PDF inclusion: multiple pdfs with page group included in a single page
+> <C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/Cost21.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission/Cost21.pdf): PDF
- inclusion: multiple pdfs with page group included in a single page
->] (C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission\paper.bbl [34] [35])
+pdfTeX warning: pdflatex.exe (file C:/Users/uqiibra2/Dropbox/to_Ibrahim/kais-16_second_draft/submission - Copy/Cost21.pd
+f): PDF inclusion: multiple pdfs with page group included in a single page
+>] ("C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission - Copy\paper.bbl" [34] [35])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 220.
  [36]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 220.
 
-(C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission\paper.aux)
+("C:\Users\uqiibra2\Dropbox\to_Ibrahim\kais-16_second_draft\submission - Copy\paper.aux")
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 220.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 220.
 Package rerunfilecheck Info: File `paper.out' has not changed.
@@ -962,10 +924,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 220.
  ) 
 Here is how much of TeX's memory you used:
- 9284 strings out of 493921
- 142806 string characters out of 3144867
- 246260 words of memory out of 3000000
- 12262 multiletter control sequences out of 15000+200000
+ 9282 strings out of 493921
+ 143121 string characters out of 3144867
+ 246261 words of memory out of 3000000
+ 12260 multiletter control sequences out of 15000+200000
  11431 words of font info for 41 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  42i,17n,40p,861b,497s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -983,11 +945,11 @@ blic/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
  (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTe
 X 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.
-pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on paper.pdf (36 pages, 2187226 bytes).
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on paper.pdf (36 pages, 2199724 bytes).
 PDF statistics:
- 1533 PDF objects out of 1728 (max. 8388607)
+ 1539 PDF objects out of 1728 (max. 8388607)
  158 named destinations out of 1000 (max. 500000)
  267 words of extra memory for PDF output out of 10000 (max. 10000000)
 
